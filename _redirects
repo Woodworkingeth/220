@@ -1,7 +1,4 @@
 # Cloudflare Pages redirects
 
-# Force www -> apex (Google treats them as separate domains; pick one)
-https://www.220partnersplc.com/* https://220partnersplc.com/:splat 301!
-
-# Trailing-slash normalization (helps SEO — one canonical URL)
+# Trailing-slash normalization
 /woodworks /woodworks/ 301
