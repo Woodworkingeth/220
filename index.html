@@ -760,5 +760,17 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
-</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.mobile-menu-btn') || document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-links') || document.querySelector('.menu-container');
+
+    if (menuBtn && navMenu) {
+      menuBtn.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        menuBtn.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
 </html>
