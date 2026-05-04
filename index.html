@@ -313,7 +313,7 @@
         Call
       </a>
       <a href="contact/" class="btn btn-dark no-arrow">Start a Project</a>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open');this.classList.toggle('is-open');this.setAttribute('aria-expanded',this.classList.contains('is-open'))">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -760,17 +760,5 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.querySelector('.mobile-menu-btn') || document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-links') || document.querySelector('.menu-container');
-
-    if (menuBtn && navMenu) {
-      menuBtn.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        menuBtn.classList.toggle('is-open');
-      });
-    }
-  });
-</script>
+</body>
 </html>
