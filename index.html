@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <!--
-  ===================================================================
+  ================================================================
   2:20 PARTNERS DESIGN & CONSTRUCTION PLC
-  ===================================================================
+  ================================================================
   
-  HOW TO SWAP IMAGES LATER (super easy):
-  ───────────────────────────────────────
-  All images live in the "/images/" folder next to this file.
-  To replace any image, just upload a new file with the SAME NAME
-  to the same folder. The website will pick it up automatically.
+  HOW TO SWAP IMAGES LATER:
+  All images live in /images/ folder. To replace any image,
+  just upload a new file with the SAME NAME. Site updates automatically.
 
   Current images:
-    images/hero.jpg        — Big hero image (top of page)
-    images/project-1.jpg   — Premier Medical Center
-    images/project-2.jpg   — ABR Apartment Tower
-    images/project-3.jpg   — Custom Villa
-    images/founders.jpg    — Beniam & Samson portrait
-
-  Recommended sizes when replacing:
-    hero.jpg:      around 2000×1200px
-    project-X.jpg: around 1200×1500px (taller than wide)
-    founders.jpg:  around 1600×1100px
-  ===================================================================
+    images/logo.png            — Main logo (transparent)
+    images/logo-light.png      — Light version for dark footer
+    images/hero.jpg            — Hero villa
+    images/project-1.jpg       — Premier Medical Center
+    images/project-2.jpg       — ABR Residences
+    images/project-3.jpg       — Private Residence villa
+    images/project-4.jpg       — Commercial Tower (real built)
+    images/project-5.jpg       — BESTOM 16 Apartments
+    images/project-6.jpg       — Sky Apartments
+    images/founders.jpg        — Beniam & Samson studio portrait
+    images/partners-onsite.jpg — Beniam & Samson at construction site
+  ================================================================
 -->
 <html lang="en">
 <head>
@@ -37,6 +36,7 @@
 <meta property="og:url" content="https://220partnersplc.com/">
 <meta property="og:image" content="https://220partnersplc.com/images/hero.jpg">
 
+<link rel="icon" type="image/png" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -47,6 +47,7 @@
   "@type": "GeneralContractor",
   "name": "2:20 Partners Design & Construction PLC",
   "url": "https://220partnersplc.com",
+  "logo": "https://220partnersplc.com/images/logo.png",
   "telephone": ["+251937174816", "+251965190000"],
   "email": "220partnersplc@gmail.com",
   "priceRange": "$$$",
@@ -85,18 +86,14 @@
 
   .top-bar { height: 4px; background: var(--gold); width: 100%; }
 
-  .nav { position: sticky; top: 0; z-index: 100; padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; background: var(--cream); border-bottom: 1px solid var(--border); }
-  .nav-logo { display: flex; align-items: center; gap: 14px; font-family: var(--serif); }
-  .logo-mark { width: 36px; height: 36px; position: relative; flex-shrink: 0; }
-  .logo-mark .sq1 { position: absolute; width: 26px; height: 26px; border: 1.2px solid var(--black); bottom: 0; left: 0; }
-  .logo-mark .sq2 { position: absolute; width: 16px; height: 16px; border: 1.2px solid var(--gold); background: var(--gold); top: 0; right: 0; }
-  .logo-mark .arc { position: absolute; width: 18px; height: 18px; border-bottom-left-radius: 100%; border-bottom: 1.2px solid var(--gold); border-left: 1.2px solid var(--gold); top: 8px; right: 6px; }
-  .logo-text { display: flex; flex-direction: column; line-height: 1; }
-  .logo-name { font-family: var(--serif); font-size: 22px; letter-spacing: 0.06em; font-weight: 500; color: var(--black); }
-  .logo-tag { font-family: var(--sans); font-size: 9px; letter-spacing: 0.32em; color: var(--gold); margin-top: 5px; text-transform: uppercase; font-weight: 500; }
-  .nav-links { display: flex; gap: 40px; list-style: none; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); }
+  /* === NAV === */
+  .nav { position: sticky; top: 0; z-index: 100; padding: 18px 56px; display: flex; align-items: center; justify-content: space-between; background: var(--cream); border-bottom: 1px solid var(--border); }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-links { display: flex; gap: 38px; list-style: none; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); }
   .nav-links a:hover { color: var(--gold); }
 
+  /* === HERO === */
   .hero { display: grid; grid-template-columns: 1.15fr 1fr; min-height: 720px; border-bottom: 1px solid var(--border); }
   .hero-image { position: relative; border-right: 1px solid var(--border); overflow: hidden; min-height: 600px; background: #2a2722; }
   .hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -112,6 +109,7 @@
   .hero h1 em { font-style: italic; font-weight: 400; color: var(--black); }
   .hero h1 .accent { color: var(--gold); }
   .hero-desc { font-size: 16px; line-height: 1.7; color: var(--gray); max-width: 460px; margin-bottom: 36px; }
+  .hero-tagline { font-family: var(--serif); font-size: 14px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; font-weight: 500; }
   .hero-ctas { display: flex; gap: 16px; margin-bottom: 56px; flex-wrap: wrap; }
 
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; border: 1px solid transparent; font-family: var(--sans); font-weight: 500; }
@@ -121,16 +119,20 @@
   .btn-gold:hover { background: var(--gold-soft); }
   .btn-dark { background: var(--black); color: var(--cream); border-color: var(--black); }
   .btn-dark:hover { background: var(--black-soft); }
+  .btn-light-on-dark { background: var(--gold); color: var(--black); border-color: var(--gold); }
+  .btn-light-on-dark:hover { background: var(--gold-soft); }
 
-  .stats { display: flex; gap: 56px; padding-top: 36px; border-top: 1px solid var(--border); }
+  .stats { display: flex; gap: 56px; padding-top: 36px; border-top: 1px solid var(--border); flex-wrap: wrap; }
   .stat-num { font-family: var(--serif); font-weight: 400; font-size: 56px; line-height: 1; color: var(--black); margin-bottom: 8px; }
   .stat-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gray); }
 
+  /* === SECTION === */
   section { padding: 110px 64px; }
   .section-head { margin-bottom: 64px; max-width: 720px; }
   .section-title { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 4.5vw, 56px); line-height: 1.1; letter-spacing: -0.005em; color: var(--black); }
   .section-title em { font-style: italic; }
 
+  /* === PROJECTS === */
   .projects-section { background: var(--cream); padding-bottom: 0; }
   .projects-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
   .project-card { position: relative; aspect-ratio: 5/6; overflow: hidden; border: 1px solid var(--border); cursor: pointer; background: #2a2722; }
@@ -138,9 +140,11 @@
   .project-card:hover img { transform: scale(1.04); }
   .project-card-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%); padding: 100px 28px 28px; color: var(--cream); }
   .project-card-meta { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 8px; }
-  .project-card-name { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.15; }
-  .projects-cta { text-align: center; margin-top: 56px; padding-bottom: 110px; }
+  .project-card-name { font-family: var(--serif); font-size: 24px; font-weight: 400; line-height: 1.15; }
+  .projects-row + .projects-row { margin-top: 24px; }
+  .projects-cta { text-align: center; margin-top: 64px; padding-bottom: 110px; }
 
+  /* === SERVICES === */
   .services-section { background: var(--paper); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .services-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
   .services-intro p { font-size: 16px; line-height: 1.75; color: var(--gray); margin-top: 28px; max-width: 380px; }
@@ -150,10 +154,11 @@
   .service-name { font-family: var(--serif); font-size: 26px; font-weight: 500; color: var(--black); margin-bottom: 10px; }
   .service-desc { font-size: 14px; line-height: 1.7; color: var(--gray); }
 
+  /* === THE FIRM === */
   .firm-section { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; padding: 0; min-height: 720px; border-bottom: 1px solid var(--border); }
   .firm-image { position: relative; border-right: 1px solid var(--border); min-height: 720px; overflow: hidden; background: #2a2722; }
-  .firm-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-  .firm-corner { position: absolute; width: 36px; height: 36px; border: 1.5px solid var(--gold); z-index: 2; }
+  .firm-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+  .firm-corner { position: absolute; width: 36px; height: 36px; border: 1.5px solid var(--gold); z-index: 2; pointer-events: none; }
   .firm-corner.tl { top: 32px; left: 32px; border-right: none; border-bottom: none; }
   .firm-corner.br { bottom: 32px; right: 32px; border-left: none; border-top: none; }
   .firm-content { padding: 110px 64px; display: flex; flex-direction: column; justify-content: center; }
@@ -165,6 +170,7 @@
   .role-tag-name { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--black); }
   .role-tag-role { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 
+  /* === PROCESS === */
   .process-section { background: var(--black); color: var(--cream); }
   .process-section .section-title { color: var(--cream); }
   .process-section .eyebrow { color: var(--gold); }
@@ -174,6 +180,17 @@
   .process-step .step-name { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 14px; color: var(--cream); }
   .process-step .step-desc { font-size: 13px; line-height: 1.7; color: rgba(237,229,208,0.65); }
 
+  /* === ON-SITE BANNER === */
+  .onsite-banner { padding: 0; min-height: 540px; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+  .onsite-img { position: relative; border-right: 1px solid var(--border); background: #2a2722; min-height: 540px; overflow: hidden; }
+  .onsite-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+  .onsite-content { padding: 100px 64px; background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
+  .onsite-content h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 4.2vw, 52px); line-height: 1.08; margin-bottom: 24px; }
+  .onsite-content h2 em { font-style: italic; color: var(--gold); }
+  .onsite-content p { font-size: 16px; line-height: 1.75; color: var(--gray); margin-bottom: 24px; max-width: 460px; }
+  .onsite-quote { font-family: var(--serif); font-size: 22px; font-style: italic; color: var(--black); line-height: 1.4; padding-left: 24px; border-left: 2px solid var(--gold); margin-top: 12px; max-width: 480px; }
+
+  /* === WOODWORKS === */
   .woodworks-banner { padding: 0; min-height: 420px; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
   .woodworks-img { position: relative; border-right: 1px solid var(--border); background-color: #6d4d34; background-image: repeating-linear-gradient(-45deg, rgba(40,30,20,0.18) 0px, rgba(40,30,20,0.18) 1px, transparent 1px, transparent 8px); }
   .woodworks-img-tag { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(247,238,219,0.5); text-align: center; line-height: 1.8; font-family: var(--serif); }
@@ -182,6 +199,7 @@
   .woodworks-content h2 em { font-style: italic; color: var(--gold); }
   .woodworks-content p { font-size: 15px; line-height: 1.7; color: var(--gray); margin-bottom: 32px; max-width: 440px; }
 
+  /* === CONTACT === */
   .contact-section { background: var(--cream); display: grid; grid-template-columns: 1.3fr 1fr; padding: 0; border-bottom: 1px solid var(--border); }
   .contact-form-wrap { padding: 110px 64px; border-right: 1px solid var(--border); }
   .contact-form-wrap h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 60px); line-height: 1.05; margin-bottom: 48px; }
@@ -200,33 +218,33 @@
   .contact-info-value a:hover { color: var(--gold); }
   .contact-info-value .alt { display: block; font-size: 16px; color: var(--gray); margin-top: 2px; }
 
-  footer { background: var(--black); color: var(--cream); padding: 32px 64px; display: flex; justify-content: space-between; align-items: center; }
-  .footer-logo { display: flex; align-items: center; gap: 14px; }
-  .footer-logo .logo-mark .sq1 { border-color: var(--cream); }
-  .footer-logo .logo-name { color: var(--cream); font-size: 18px; }
-  .footer-logo .logo-tag { color: var(--gold); }
-  .footer-copy { font-size: 11px; color: rgba(237,229,208,0.5); letter-spacing: 0.06em; text-align: right; }
+  /* === FOOTER === */
+  footer { background: var(--black); color: var(--cream); padding: 32px 64px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .footer-logo img { height: 44px; width: auto; }
+  .footer-copy { font-size: 11px; color: rgba(237,229,208,0.5); letter-spacing: 0.06em; text-align: right; line-height: 1.7; }
 
+  /* === MOBILE === */
   @media (max-width: 900px) {
-    .nav { padding: 16px 20px; }
+    .nav { padding: 12px 20px; }
+    .nav-logo img { height: 38px; }
     .nav-links { display: none; }
-    .logo-name { font-size: 18px; } .logo-tag { font-size: 8px; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-image { min-height: 400px; border-right: none; border-bottom: 1px solid var(--border); }
+    .hero-image { min-height: 380px; border-right: none; border-bottom: 1px solid var(--border); }
     .featured-project { left: 20px; right: 20px; bottom: 20px; padding: 16px 20px; }
     .featured-project .name { font-size: 18px; }
     .hero-content { padding: 56px 24px; }
     .hero-ctas { flex-direction: column; align-items: stretch; }
-    .stats { gap: 32px; flex-wrap: wrap; }
-    .stat-num { font-size: 40px; }
+    .stats { gap: 28px; }
+    .stat-num { font-size: 36px; }
     section { padding: 64px 24px; }
     .projects-row { grid-template-columns: 1fr; gap: 16px; }
+    .projects-row + .projects-row { margin-top: 16px; }
     .projects-cta { padding-bottom: 64px; }
     .services-grid { grid-template-columns: 1fr; gap: 32px; }
-    .service-item { padding: 24px 24px; }
-    .firm-section { grid-template-columns: 1fr; min-height: auto; }
-    .firm-image { min-height: 420px; border-right: none; border-bottom: 1px solid var(--border); }
-    .firm-content { padding: 56px 24px; }
+    .service-item { padding: 24px; }
+    .firm-section, .onsite-banner { grid-template-columns: 1fr; min-height: auto; }
+    .firm-image, .onsite-img { min-height: 380px; border-right: none; border-bottom: 1px solid var(--border); }
+    .firm-content, .onsite-content { padding: 56px 24px; }
     .process-grid { grid-template-columns: 1fr; gap: 32px; }
     .woodworks-banner { grid-template-columns: 1fr; }
     .woodworks-img { min-height: 280px; border-right: none; border-bottom: 1px solid var(--border); }
@@ -244,12 +262,8 @@
 <div class="top-bar"></div>
 
 <header class="nav">
-  <a href="#" class="nav-logo">
-    <span class="logo-mark"><span class="sq1"></span><span class="sq2"></span><span class="arc"></span></span>
-    <span class="logo-text">
-      <span class="logo-name">2:20 PARTNERS</span>
-      <span class="logo-tag">Elegance Meets Excellence</span>
-    </span>
+  <a href="#" class="nav-logo" aria-label="2:20 Partners home">
+    <img src="images/logo.png" alt="2:20 Partners Design & Construction PLC">
   </a>
   <nav>
     <ul class="nav-links">
@@ -275,7 +289,7 @@
     </div>
   </div>
   <div class="hero-content">
-    <span class="eyebrow">Design & Construction · Addis Ababa</span>
+    <span class="hero-tagline">Elegance Meets Excellence</span>
     <h1>Where<br><em>Vision</em><br>Meets <span class="accent">Precision</span>.</h1>
     <p class="hero-desc">2:20 Partners brings architectural vision and construction precision together — designing and building high-end residential and commercial spaces across Addis Ababa, Ethiopia.</p>
     <div class="hero-ctas">
@@ -296,14 +310,14 @@
 
   <div class="projects-row">
     <article class="project-card">
-      <img src="images/project-1.jpg" alt="Premier Medical Center commercial building design by 2:20 Partners in Addis Ababa" loading="lazy">
+      <img src="images/project-1.jpg" alt="Premier Medical Center commercial design by 2:20 Partners in Addis Ababa" loading="lazy">
       <div class="project-card-overlay">
         <div class="project-card-meta">Commercial · Healthcare</div>
         <div class="project-card-name">Premier Medical Center</div>
       </div>
     </article>
     <article class="project-card">
-      <img src="images/project-2.jpg" alt="Modern apartment building design by 2:20 Partners in Addis Ababa" loading="lazy">
+      <img src="images/project-2.jpg" alt="ABR Residences modern apartment design by 2:20 Partners in Addis Ababa" loading="lazy">
       <div class="project-card-overlay">
         <div class="project-card-meta">Residential · Multi-family</div>
         <div class="project-card-name">ABR Residences</div>
@@ -314,6 +328,30 @@
       <div class="project-card-overlay">
         <div class="project-card-meta">Residential · Custom Villa</div>
         <div class="project-card-name">Private Residence</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="projects-row">
+    <article class="project-card">
+      <img src="images/project-4.jpg" alt="Commercial mixed-use tower built by 2:20 Partners in Addis Ababa" loading="lazy">
+      <div class="project-card-overlay">
+        <div class="project-card-meta">Commercial · Mixed Use</div>
+        <div class="project-card-name">Commercial Tower</div>
+      </div>
+    </article>
+    <article class="project-card">
+      <img src="images/project-5.jpg" alt="BESTOM 16 modern apartment building design by 2:20 Partners" loading="lazy">
+      <div class="project-card-overlay">
+        <div class="project-card-meta">Residential · Apartments</div>
+        <div class="project-card-name">BESTOM 16</div>
+      </div>
+    </article>
+    <article class="project-card">
+      <img src="images/project-6.jpg" alt="Modern apartment building design by 2:20 Partners in Addis Ababa" loading="lazy">
+      <div class="project-card-overlay">
+        <div class="project-card-meta">Residential · Apartments</div>
+        <div class="project-card-name">Sky Apartments</div>
       </div>
     </article>
   </div>
@@ -340,12 +378,12 @@
         <p class="service-desc">Boutique home building with clean detailing, honest schedules, and quality standards that hold up over time. Every project led directly by the partners.</p>
       </div>
       <div class="service-item">
-        <h3 class="service-name">Commercial Remodeling</h3>
-        <p class="service-desc">Transforming existing commercial spaces with modern finishes, optimized layouts, and international-standard fit-out.</p>
+        <h3 class="service-name">Commercial Construction & Remodeling</h3>
+        <p class="service-desc">From new commercial towers to interior fit-outs, we build offices, healthcare, and retail spaces to international standards.</p>
       </div>
       <div class="service-item">
-        <h3 class="service-name">Interior Design & Fit-Out</h3>
-        <p class="service-desc">Full interior design services from concept through material procurement, joinery, and complete installation — backed by our in-house workshop.</p>
+        <h3 class="service-name">Interior Design & Custom Millwork</h3>
+        <p class="service-desc">Full interior design backed by our in-house woodworking shop — custom cabinetry, closets, vanities, and furniture, all under one roof.</p>
       </div>
     </div>
   </div>
@@ -386,6 +424,18 @@
     <div class="process-step"><div class="step-num">— 03</div><h3 class="step-name">Engineering & Permitting</h3><p class="step-desc">Detailed structural drawings, MEP coordination, and full permitting handled by our engineering team.</p></div>
     <div class="process-step"><div class="step-num">— 04</div><h3 class="step-name">Construction</h3><p class="step-desc">Benyam and our crews build with weekly site updates, photo progress, and direct partner oversight on every detail.</p></div>
     <div class="process-step"><div class="step-num">— 05</div><h3 class="step-name">Handover & Care</h3><p class="step-desc">Final walkthrough, punch-list resolution, warranty, and post-handover support that lasts beyond move-in.</p></div>
+  </div>
+</section>
+
+<section class="onsite-banner">
+  <div class="onsite-img">
+    <img src="images/partners-onsite.jpg" alt="Benyam and Samson on-site at a 2:20 Partners construction project in Addis Ababa">
+  </div>
+  <div class="onsite-content">
+    <span class="eyebrow">— Hands-On Leadership</span>
+    <h2>From the boardroom to<br><em>the building site.</em></h2>
+    <p>Every 2:20 Partners project gets direct partner oversight on-site. Benyam and Samson are personally involved at every phase — from groundbreaking to final walkthrough.</p>
+    <p class="onsite-quote">No hand-offs. No surprises. Just two partners who answer their own phones.</p>
   </div>
 </section>
 
@@ -454,13 +504,9 @@
 </main>
 
 <footer>
-  <div class="footer-logo">
-    <span class="logo-mark"><span class="sq1"></span><span class="sq2"></span><span class="arc"></span></span>
-    <span class="logo-text">
-      <span class="logo-name">2:20 PARTNERS</span>
-      <span class="logo-tag">Elegance Meets Excellence</span>
-    </span>
-  </div>
+  <a href="#" class="footer-logo" aria-label="2:20 Partners home">
+    <img src="images/logo-light.png" alt="2:20 Partners Design & Construction PLC">
+  </a>
   <div class="footer-copy">© 2026 2:20 Partners Design & Construction PLC<br>All rights reserved · Addis Ababa, Ethiopia</div>
 </footer>
 
