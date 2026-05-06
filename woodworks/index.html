@@ -1,606 +1,377 @@
 <!DOCTYPE html>
+<!--
+  ================================================================
+  2:20 WOODWORKS — Custom Millwork & Cabinetry
+  ================================================================
+  Sister page of 2:20 Partners. Same nav, footer, and style.
+  
+  IMAGES (currently elegant placeholders):
+  When woodworking photos are ready, save them as:
+    images/woodworks-hero.jpg              — Hero (workshop or finished cabinetry)
+    images/woodworks-1.jpg through -6.jpg  — Gallery items
+    images/woodworks-cta.jpg               — Bottom CTA banner
+  Then in this file, replace the .wood-placeholder divs with <img> tags.
+-->
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2:20 Woodworks | Custom Cabinetry & Millwork in Addis Ababa</title>
+<meta name="description" content="2:20 Woodworks is the in-house workshop of 2:20 Partners. Custom kitchen cabinetry, built-in closets, vanities, doors, and furniture, built in Addis Ababa, Ethiopia.">
+<link rel="canonical" href="https://220partnersplc.com/woodworks.html">
+<meta property="og:title" content="2:20 Woodworks — Custom Cabinetry in Addis Ababa">
+<meta property="og:description" content="Custom kitchen cabinetry, built-in closets, vanities, and millwork from the in-house workshop of 2:20 Partners.">
+<meta property="og:type" content="website">
 
-<title>2:20 Woodworks | Custom Furniture, Cabinetry &amp; Joinery in Addis Ababa</title>
-<meta name="description" content="2:20 Woodworks — bespoke furniture, kitchens, walk-in closets, vanities, doors, and stone-and-wood sinks for high-end homes in Addis Ababa, Ethiopia. Sister company of 2:20 Partners. Call +251 93 717 4816." />
-<meta name="keywords" content="custom furniture Addis Ababa, woodworking Ethiopia, kitchen cabinetry Addis Ababa, walk-in closet Addis Ababa, custom vanity Ethiopia, bespoke joinery Addis Ababa, furniture maker Ethiopia, custom doors Addis Ababa, stone wood sink, hardwood furniture Ethiopia" />
-<link rel="canonical" href="https://220partnersplc.com/woodworks/" />
-<meta name="robots" content="index,follow" />
-
-<meta property="og:type" content="website" />
-<meta property="og:title" content="2:20 Woodworks | Custom Furniture &amp; Joinery in Addis Ababa" />
-<meta property="og:description" content="Bespoke furniture, kitchens, closets, and stone-and-wood sinks for high-end Ethiopian homes. Built in our own shop, finished by hand." />
-<meta property="og:url" content="https://220partnersplc.com/woodworks/" />
-<meta property="og:image" content="https://220partnersplc.com/images/hero-rendering.png" />
-
-<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-<link rel="apple-touch-icon" href="../favicon.svg" />
-<meta name="theme-color" content="#f2ece1" />
-
+<link rel="icon" type="image/png" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "2:20 Woodworks",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "2:20 Partners Design & Construction PLC",
-    "url": "https://220partnersplc.com"
-  },
-  "description": "Bespoke furniture, cabinetry, and custom joinery — kitchens, walk-in closets, vanities, doors, and stone-and-wood sinks for high-end homes in Addis Ababa, Ethiopia.",
-  "telephone": "+251937174816",
-  "email": "220partnersplc@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Megenagna, Addis Ababa",
-    "addressLocality": "Addis Ababa",
-    "addressCountry": "ET"
-  },
-  "areaServed": "Addis Ababa",
-  "url": "https://220partnersplc.com/woodworks/"
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  /* Override base hero — woodworks has darker, warmer feel */
-  body.woodworks { background: var(--cream); }
+  :root {
+    --cream: #EDE5D0; --cream-deep: #E0D6BD; --paper: #F4EEDB;
+    --black: #161513; --black-soft: #2A2722;
+    --gold: #BC9B5A; --gold-soft: #D4B97A;
+    --gray: #6E6657; --border: #C9BFA3;
+    --wood-mid: #6d4d34;
+    --serif: 'Cormorant Garamond', 'Big Caslon', 'Hoefler Text', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); font-weight: 300; color: var(--black); background: var(--cream); line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; transition: color 0.3s ease; }
+  ::selection { background: var(--gold); color: var(--black); }
 
-  .ww-hero {
-    display: grid; grid-template-columns: 1fr 1fr;
-    min-height: 640px;
-    border-bottom: 4px solid var(--gold);
-  }
-  .ww-hero-img {
-    position: relative; overflow: hidden;
-    background: #2a1a0c;
-  }
-  .ww-hero-img img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    animation: ken-burns 18s ease-in-out infinite alternate;
-  }
-  .ww-hero-img::after {
-    content: "2:20"; position: absolute;
-    bottom: 32px; right: 40px;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-size: 120px; line-height: 0.85;
-    color: rgba(255,245,214,0.22);
-    letter-spacing: -0.02em;
-    pointer-events: none; z-index: 2;
-  }
-  .ww-hero-img::before {
-    content: "WOODWORKS"; position: absolute;
-    top: 36px; left: 36px;
-    font-family: 'DM Sans', sans-serif; font-size: 11px;
-    letter-spacing: 0.4em; color: rgba(255,245,214,0.85);
-    z-index: 2;
-  }
-  .ww-hero-content {
-    padding: 96px 80px;
-    display: flex; flex-direction: column; justify-content: center;
-    background: var(--cream);
+  .top-bar { height: 4px; background: var(--gold); width: 100%; }
+
+  /* Wood-grain placeholder */
+  .wood-placeholder {
+    background-color: var(--wood-mid);
+    background-image:
+      repeating-linear-gradient(90deg, rgba(40,30,20,0.25) 0px, rgba(40,30,20,0.25) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(90deg, rgba(255,220,180,0.05) 0px, rgba(255,220,180,0.05) 2px, transparent 2px, transparent 8px),
+      linear-gradient(180deg, rgba(40,30,20,0.4) 0%, rgba(40,30,20,0) 30%, rgba(40,30,20,0) 70%, rgba(40,30,20,0.5) 100%);
     position: relative;
   }
-  .ww-hero-content::before {
-    content: ""; position: absolute;
-    top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  .wood-placeholder::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(0deg, rgba(20,10,5,0.08) 0px, rgba(20,10,5,0.08) 1px, transparent 1px, transparent 14px);
   }
-  .ww-hero-content .crumbs {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-light); margin-bottom: 18px;
+  .wood-placeholder-tag {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    font-family: var(--serif); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(247,238,219,0.55); text-align: center; line-height: 1.9; z-index: 2;
   }
-  .ww-hero-content .crumbs a { color: var(--ink-mid); }
-  .ww-hero-content .crumbs span.sep { color: var(--gold); }
-  .ww-hero-content h1 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-size: 80px; line-height: 0.94; margin: 12px 0 18px;
-    letter-spacing: -0.01em;
-  }
-  .ww-hero-content h1 .it { font-style: italic; color: var(--gold); }
-  .ww-hero-content h1 .word-anim {
-    display: inline-block; opacity: 0; transform: translateY(20px);
-    animation: word-rise .8s cubic-bezier(.2,.7,.2,1) forwards;
-    margin-right: 0.18em;
-  }
-  .ww-hero-content .hero-meta {
-    display: flex; gap: 36px; margin-top: 36px; padding-top: 28px;
-    border-top: 1px solid var(--line);
-    flex-wrap: wrap;
-  }
-  .ww-hero-content .hero-meta div { display: flex; flex-direction: column; gap: 4px; min-width: 120px; }
-  .ww-hero-content .hero-meta .hm-k {
-    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-dark); font-weight: 500;
-  }
-  .ww-hero-content .hero-meta .hm-v {
-    font-family: 'Cormorant Garamond', serif; font-weight: 400;
-    font-size: 18px; color: var(--ink); line-height: 1.2;
-  }
-  /* Local testimonials variant */
-  .testimonials {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    margin-top: 48px;
-  }
-  .testimonials .testi-quote {
-    font-family: 'Cormorant Garamond', serif; font-weight: 400;
-    font-style: italic; font-size: 22px; line-height: 1.45;
-    color: var(--ink); margin: 0 0 28px; letter-spacing: -0.005em;
-  }
-  .testimonials .testi-meta {
-    display: flex; align-items: center; gap: 14px;
-    padding-top: 24px; border-top: 1px solid var(--line);
-  }
-  .testimonials .testi-name { font-size: 13px; font-weight: 600; color: var(--ink); }
-  .testimonials .testi-role { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dark); margin-top: 4px; }
-  /* Local footer column variant */
-  footer .foot-top { grid-template-columns: 2fr 1fr 1fr 1fr; }
-  footer .foot-col { display: flex; flex-direction: column; gap: 12px; }
-  footer .foot-col.foot-brand { gap: 16px; }
-  footer .foot-h { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 8px; }
-  footer .foot-blurb { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; margin: 0; }
-  footer .foot-meta { font-size: 13px; color: rgba(255,255,255,0.55); }
-  footer .foot-legal { font-size: 11px; color: rgba(255,255,255,0.35); }
-  footer .foot-legal a { color: rgba(255,255,255,0.55); }
-  footer .foot-legal a:hover { color: var(--gold); }
-  /* CTA inner */
-  .cta-band .cta-inner { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .ww-hero-content p.lede { color: var(--ink-mid); max-width: 460px; font-size: 16px; line-height: 1.7; }
 
-  /* Categories grid */
-  .cat-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-    background: var(--line);
-    margin-top: 56px;
-  }
-  .cat {
-    background: var(--cream-alt);
-    padding: 40px 32px;
-    border-top: 2px solid var(--gold);
-    transition: background .2s ease;
-  }
-  .cat:hover { background: var(--cream); }
-  .cat .num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; letter-spacing: 0.3em; color: var(--gold);
-    margin-bottom: 14px; text-transform: uppercase;
-  }
-  .cat h3 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-size: 28px; line-height: 1.05; margin: 0 0 12px; color: var(--ink);
-  }
-  .cat h3 .it { font-style: italic; }
-  .cat p { color: var(--ink-mid); font-size: 13px; margin: 0; }
+  .nav { position: sticky; top: 0; z-index: 100; padding: 18px 56px; display: flex; align-items: center; justify-content: space-between; background: var(--cream); border-bottom: 1px solid var(--border); }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-links { display: flex; gap: 38px; list-style: none; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); }
 
-  /* Materials band */
-  .materials {
-    background: var(--ink); color: #fff;
-    padding: 96px 0;
-  }
-  .materials .sec-head { border-bottom-color: rgba(200,169,110,0.22); }
-  .materials .sec-title { color: #fff; }
-  .materials .sec-title .it { color: var(--gold); }
-  .mat-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-    background: rgba(200,169,110,0.18);
-    margin-top: 32px;
-  }
-  .mat {
-    background: var(--ink);
-    padding: 32px 26px;
-    border-top: 2px solid rgba(200,169,110,0.22);
-  }
-  .mat-name {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 22px; color: var(--gold); margin: 0 0 8px;
-  }
-  .mat p { font-size: 12px; color: rgba(255,255,255,0.55); margin: 0; line-height: 1.7; }
+  .hero { display: grid; grid-template-columns: 1.15fr 1fr; min-height: 660px; border-bottom: 1px solid var(--border); }
+  .hero-image { position: relative; border-right: 1px solid var(--border); overflow: hidden; min-height: 600px; }
+  .hero-image .wood-placeholder { position: absolute; inset: 0; }
+  .hero-image-banner { position: absolute; bottom: 32px; left: 32px; right: 32px; background: rgba(244, 238, 219, 0.96); padding: 22px 28px; border-left: 3px solid var(--gold); backdrop-filter: blur(6px); z-index: 3; }
+  .hero-image-banner .label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .hero-image-banner .name { font-family: var(--serif); font-size: 22px; color: var(--black); margin-bottom: 4px; font-weight: 500; }
+  .hero-image-banner .meta { font-size: 12px; color: var(--gray); letter-spacing: 0.04em; }
 
-  /* Process steps */
-  .ww-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-    background: var(--line);
-    margin-top: 56px;
-  }
-  .ww-step {
-    background: var(--cream-alt);
-    padding: 36px 28px;
-    border-top: 2px solid var(--gold);
-  }
-  .ww-step-num {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-size: 48px; color: rgba(200,169,110,0.7);
-    line-height: 1; margin-bottom: 10px;
-  }
-  .ww-step h3 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 400;
-    font-size: 20px; margin: 0 0 10px; color: var(--ink);
-  }
-  .ww-step p { color: var(--ink-mid); font-size: 12px; margin: 0; line-height: 1.7; }
+  .hero-content { padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; background: var(--cream); }
+  .eyebrow { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+  .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+  .hero-tagline { font-family: var(--serif); font-size: 14px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; font-weight: 500; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.005em; margin-bottom: 28px; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-desc { font-size: 16px; line-height: 1.7; color: var(--gray); max-width: 480px; margin-bottom: 36px; }
 
-  /* Two-column intro */
-  .ww-intro {
-    display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start;
-    padding-bottom: 56px; border-bottom: 1px solid var(--line);
-  }
-  .ww-intro h2 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-size: 48px; line-height: 1; color: var(--ink); margin: 12px 0 0;
-  }
-  .ww-intro h2 .it { font-style: italic; color: var(--gold); }
-  .ww-intro p { color: var(--ink-mid); margin: 0 0 18px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; border: 1px solid transparent; font-family: var(--sans); font-weight: 500; }
+  .btn-gold { background: var(--gold); color: var(--black); border-color: var(--gold); }
+  .btn-gold:hover { background: var(--gold-soft); }
+  .btn-dark { background: var(--black); color: var(--cream); border-color: var(--black); }
+  .btn-dark:hover { background: var(--black-soft); }
+  .btn-light { background: var(--paper); color: var(--black); border-color: var(--border); }
+  .btn-light:hover { background: var(--cream-deep); }
 
-  /* CTA band */
-  .cta-band {
-    background: var(--gold); color: #fff;
-    padding: 80px 0;
-    text-align: center;
-  }
-  .cta-band h2 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-size: 48px; line-height: 1.05; color: #fff; margin: 0 0 16px;
-  }
-  .cta-band h2 .it { font-style: italic; }
-  .cta-band p { color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 28px; }
-  .cta-band .btn { background: var(--ink); color: #fff; padding: 18px 36px; }
+  section { padding: 110px 64px; }
+  .section-head { margin-bottom: 64px; max-width: 720px; }
+  .section-title { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 4.5vw, 56px); line-height: 1.1; letter-spacing: -0.005em; color: var(--black); }
+  .section-title em { font-style: italic; }
 
-  @media (max-width: 1024px) {
-    .ww-hero-content { padding: 56px 48px; }
-    .ww-hero-content h1 { font-size: 60px; }
-  }
-  @media (max-width: 768px) {
-    .ww-hero { grid-template-columns: 1fr; }
-    .ww-hero-img { height: 320px; }
-    .ww-hero-content { padding: 48px 24px; }
-    .ww-hero-content h1 { font-size: 44px; }
-    .ww-hero-content .hero-meta { gap: 20px; }
-    .ww-hero-content .hero-meta .hm-v { font-size: 15px; }
-    .cat-grid, .mat-grid, .ww-steps { grid-template-columns: 1fr; }
-    .ww-intro { grid-template-columns: 1fr; gap: 24px; }
-    .ww-intro h2 { font-size: 32px; }
-    .cta-band h2 { font-size: 32px; }
-    .testimonials { grid-template-columns: 1fr; }
-    footer .foot-top { grid-template-columns: 1fr 1fr; gap: 32px; }
-  }
-  @media (max-width: 540px) {
-    .mat-grid, .ww-steps { grid-template-columns: 1fr 1fr; }
-    footer .foot-top { grid-template-columns: 1fr; }
+  .about-section { background: var(--paper); border-bottom: 1px solid var(--border); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+  .about-grid p { font-size: 17px; line-height: 1.75; color: var(--gray); margin-bottom: 20px; max-width: 540px; }
+  .about-grid p:first-of-type { font-family: var(--serif); font-size: 24px; font-style: italic; color: var(--black); line-height: 1.5; margin-bottom: 28px; }
+
+  .capabilities-section { background: var(--cream); border-bottom: 1px solid var(--border); }
+  .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 56px; }
+  .cap-item { background: var(--cream); padding: 56px 36px; transition: background 0.3s ease; }
+  .cap-item:hover { background: var(--paper); }
+  .cap-num { font-family: var(--serif); font-size: 12px; color: var(--gold); letter-spacing: 0.25em; margin-bottom: 24px; }
+  .cap-name { font-family: var(--serif); font-size: 26px; font-weight: 500; color: var(--black); margin-bottom: 12px; line-height: 1.2; }
+  .cap-desc { font-size: 14px; line-height: 1.7; color: var(--gray); }
+
+  .gallery-section { background: var(--paper); padding-bottom: 0; border-bottom: 1px solid var(--border); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+  .gallery-item { position: relative; aspect-ratio: 4/5; overflow: hidden; border: 1px solid var(--border); cursor: pointer; }
+  .gallery-item .wood-placeholder { position: absolute; inset: 0; }
+  .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%); padding: 100px 28px 24px; color: var(--cream); z-index: 3; }
+  .gallery-meta { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 8px; }
+  .gallery-name { font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.15; }
+  .gallery-cta { text-align: center; margin-top: 64px; padding-bottom: 110px; }
+
+  .why-section { background: var(--black); color: var(--cream); }
+  .why-section .section-title { color: var(--cream); }
+  .why-section .eyebrow { color: var(--gold); }
+  .why-section .eyebrow::before { background: var(--gold); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; border-top: 1px solid rgba(237,229,208,0.15); padding-top: 48px; }
+  .why-step .why-num { font-family: var(--serif); font-size: 12px; color: var(--gold); letter-spacing: 0.25em; margin-bottom: 16px; }
+  .why-step .why-name { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 14px; color: var(--cream); }
+  .why-step .why-desc { font-size: 13px; line-height: 1.7; color: rgba(237,229,208,0.65); }
+
+  .cta-banner { padding: 0; min-height: 380px; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+  .cta-img { position: relative; border-right: 1px solid var(--border); }
+  .cta-img .wood-placeholder { position: absolute; inset: 0; }
+  .cta-content { padding: 80px 64px; background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
+  .cta-content h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; margin-bottom: 20px; }
+  .cta-content h2 em { font-style: italic; color: var(--gold); }
+  .cta-content p { font-size: 15px; line-height: 1.7; color: var(--gray); margin-bottom: 32px; max-width: 440px; }
+
+  footer { background: var(--black); color: var(--cream); padding: 32px 64px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .footer-logo img { height: 44px; width: auto; }
+  .footer-copy { font-size: 11px; color: rgba(237,229,208,0.5); letter-spacing: 0.06em; text-align: right; line-height: 1.7; }
+
+  @media (max-width: 900px) {
+    .nav { padding: 12px 20px; }
+    .nav-logo img { height: 38px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-image { min-height: 360px; border-right: none; border-bottom: 1px solid var(--border); }
+    .hero-image-banner { left: 20px; right: 20px; bottom: 20px; padding: 16px 20px; }
+    .hero-image-banner .name { font-size: 18px; }
+    .hero-content { padding: 56px 24px; }
+    section { padding: 64px 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cap-grid { grid-template-columns: 1fr; }
+    .cap-item { padding: 36px 24px; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 16px; }
+    .gallery-cta { padding-bottom: 64px; }
+    .why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cta-banner { grid-template-columns: 1fr; }
+    .cta-img { min-height: 280px; border-right: none; border-bottom: 1px solid var(--border); }
+    .cta-content { padding: 56px 24px; }
+    footer { flex-direction: column; gap: 16px; padding: 32px 24px; text-align: center; }
+    .footer-copy { text-align: center; }
   }
 </style>
 </head>
-<body class="woodworks">
+<body>
 
-<!-- Animated announcement bar -->
-<div class="ann-bar" aria-hidden="true">
-  <div class="ann-track">
-    <span>Now booking 2026 commissions — kitchens, closets, statement pieces</span>
-    <span>Built where the drawings are made — Megenagna, Addis Ababa</span>
-    <span>Ethiopian hardwoods, hand-finished, signed by the maker</span>
-    <span>Sister company of 2:20 Partners Design &amp; Construction PLC</span>
-    <span>Now booking 2026 commissions — kitchens, closets, statement pieces</span>
-    <span>Built where the drawings are made — Megenagna, Addis Ababa</span>
-    <span>Ethiopian hardwoods, hand-finished, signed by the maker</span>
-    <span>Sister company of 2:20 Partners Design &amp; Construction PLC</span>
-  </div>
-</div>
+<div class="top-bar"></div>
 
-<div class="gold-bar"></div>
-<nav class="top">
-  <div class="nav-inner">
-    <a href="../" class="logo" aria-label="2:20 Partners home">
-      <svg class="logo-mark" viewBox="0 0 60 48" fill="none" aria-hidden="true">
-        <rect x="2" y="10" width="34" height="34" stroke="#1c1a16" stroke-width="1.5" fill="none"/>
-        <rect x="20" y="2" width="18" height="18" stroke="#C8A96E" stroke-width="2" fill="none"/>
-        <rect x="6" y="37" width="7" height="7" stroke="#C8A96E" stroke-width="1.2" fill="none"/>
-        <path d="M 6 36 Q 6 18 24 18" stroke="#C8A96E" stroke-width="1.2" fill="none"/>
-      </svg>
-      <div>
-        <div class="logo-word">2:20 PARTNERS</div>
-        <div class="logo-sub">Design &amp; Construction PLC</div>
-      </div>
-    </a>
-    <div class="nav-right">
-      <div class="nav-links" id="navLinks">
-        <a href="../">Home</a>
-        <a href="../services/">Services</a>
-        <a href="../projects/">Projects</a>
-        <a href="../woodworks/" class="active">Woodworks</a>
-        <a href="../contact/">Contact</a>
-      </div>
-      <a href="tel:+251937174816" class="nav-call-mobile" aria-label="Call 2:20 Partners">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-        Call
-      </a>
-      <a href="../contact/" class="btn btn-dark">Commission a Piece</a>
-      <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+<header class="nav">
+  <a href="index.html" class="nav-logo" aria-label="2:20 Partners home">
+    <img src="images/logo.png" alt="2:20 Partners Design & Construction PLC">
+  </a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#firm">The Firm</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="woodworks.html" class="active">Woodworks</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-image">
+    <div class="wood-placeholder">
+      <div class="wood-placeholder-tag">2:20 Woodworks<br>Workshop · Addis Ababa<br>Photography Coming Soon</div>
+    </div>
+    <div class="hero-image-banner">
+      <div class="label">— The Workshop</div>
+      <div class="name">2:20 Woodworks</div>
+      <div class="meta">Custom Millwork · Addis Ababa</div>
     </div>
   </div>
-</nav>
-
-<section class="ww-hero" aria-label="Hero">
-  <div class="ww-hero-img">
-    <img src="../images/woodworks-detail.svg" alt="Custom wood cabinetry, walnut joinery, and brass hardware in a 2:20 Woodworks kitchen project" />
-  </div>
-  <div class="ww-hero-content">
-    <div class="crumbs">
-      <a href="../">Home</a><span class="sep">/</span><span>Woodworks</span>
-    </div>
-    <div class="eyebrow">Sister Company &middot; Bespoke Joinery</div>
-    <h1>
-      <span class="word-anim" style="animation-delay:.05s;">2:20</span>
-      <span class="word-anim it" style="animation-delay:.20s; font-style:italic; color:var(--gold);">Woodworks</span>
-    </h1>
-    <hr class="gold-rule" />
-    <p class="lede">
-      Bespoke furniture, cabinetry, and joinery — built in our own shop, finished by hand. Custom kitchens, walk-in closets, vanities, doors, and stone-and-wood sinks made to the architect's drawings, for the same caliber of project as <a href="../" style="color:var(--gold);border-bottom:1px solid var(--gold);">2:20 Partners</a>.
-    </p>
-    <div style="display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;">
-      <a href="../contact/" class="btn btn-dark">Commission a Piece</a>
-      <a href="tel:+251937174816" class="btn btn-outline">+251 93 717 4816</a>
-    </div>
-    <div class="hero-meta" style="margin-top: 36px;">
-      <div><div class="hm-k">Disciplines</div><div class="hm-v">6 categories</div></div>
-      <div><div class="hm-k">Hardwoods</div><div class="hm-v">Tid &middot; Wanza &middot; Zigba &middot; Tikur Inchet</div></div>
-      <div><div class="hm-k">Lead time</div><div class="hm-v">8–14 weeks</div></div>
-      <div><div class="hm-k">Shop</div><div class="hm-v">Megenagna, Addis</div></div>
+  <div class="hero-content">
+    <span class="hero-tagline">Elegance Meets Excellence</span>
+    <h1>Custom millwork,<br><em>made by hand.</em></h1>
+    <p class="hero-desc">2:20 Woodworks is the in-house workshop of 2:20 Partners — building the cabinetry, closets, vanities, and furniture that finish our projects, and serving direct clients with the same standards.</p>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="#capabilities" class="btn btn-light">What We Build</a>
+      <a href="index.html#contact" class="btn btn-gold">Request a Quote →</a>
     </div>
   </div>
 </section>
 
-<section style="padding: 96px 0 60px;">
-  <div class="container">
-    <div class="ww-intro reveal">
-      <div>
-        <div class="eyebrow">The Shop</div>
-        <h2>Built where the <span class="it">drawings</span> are made.</h2>
-      </div>
-      <div>
-        <p>2:20 Woodworks operates as the in-house joinery for 2:20 Partners — but takes on independent commissions, too. Because our makers sit one room away from the architects, what's drawn is what's built. Profiles, joinery details, hardware specs, and finish tolerances are agreed before a single board is cut.</p>
-        <p>We work in Ethiopian hardwoods — Tid, Wanza, Zigba, Tikur Inchet — paired with imported veneers, brass, stone, and machined steel for hardware. Every commission is hand-finished and signed.</p>
-      </div>
+<section class="about-section">
+  <div class="about-grid">
+    <div>
+      <span class="eyebrow">— The Workshop</span>
+      <h2 class="section-title">Built in-house.<br><em>Built to last.</em></h2>
+    </div>
+    <div>
+      <p>Most builders outsource their cabinetry. We don't.</p>
+      <p>2:20 Woodworks is our in-house millwork shop — a small, hands-on team of craftsmen who build to architectural specification, with materials and joinery we choose ourselves. Every kitchen, every closet, every vanity that finishes a 2:20 Partners project comes from our own workshop.</p>
+      <p>We also take on direct commissions for clients who want custom millwork without a full design-build engagement — kitchens, wardrobes, libraries, or one-off pieces of furniture.</p>
     </div>
   </div>
 </section>
 
-<section style="padding: 60px 0 96px;">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div>
-        <div class="eyebrow">What We Make</div>
-        <h2 class="sec-title">Six <span class="it">categories.</span></h2>
-      </div>
+<section class="capabilities-section" id="capabilities">
+  <span class="eyebrow">— What We Build</span>
+  <h2 class="section-title">Capabilities.</h2>
+
+  <div class="cap-grid">
+    <div class="cap-item">
+      <div class="cap-num">— 01</div>
+      <h3 class="cap-name">Kitchen Cabinetry</h3>
+      <p class="cap-desc">Full custom kitchens — base and wall cabinets, islands, pantry walls, and integrated appliance surrounds. Dovetail drawers, soft-close hardware, and finishes built for daily use.</p>
     </div>
-    <div class="cat-grid reveal">
-      <div class="cat">
-        <div class="num">01</div>
-        <h3>Custom <span class="it">Kitchens</span></h3>
-        <p>Full kitchens from cabinetry to islands to integrated appliances. Hardwood frames, soft-close hardware, stone or wood counters, brass or steel fixtures — built to the architect's plan, fitted to the millimeter.</p>
-      </div>
-      <div class="cat">
-        <div class="num">02</div>
-        <h3>Walk-In <span class="it">Closets</span></h3>
-        <p>Dressing rooms designed for how you actually live. Floor-to-ceiling cabinetry, integrated lighting, dressing islands, jewelry drawers, and pull-outs sized to your wardrobe.</p>
-      </div>
-      <div class="cat">
-        <div class="num">03</div>
-        <h3>Vanities &amp; <span class="it">Bathrooms</span></h3>
-        <p>Wall-hung or freestanding vanities with our signature integrated stone-and-wood sinks. Floating shelves, medicine cabinets, and tall towers — built to match the cabinetry of the rest of the home.</p>
-      </div>
-      <div class="cat">
-        <div class="num">04</div>
-        <h3>Doors &amp; <span class="it">Hardware</span></h3>
-        <p>Solid hardwood doors — interior, exterior, pocket, pivot — with brass or matte-black hardware. Finished in matching tones to the floor and trim.</p>
-      </div>
-      <div class="cat">
-        <div class="num">05</div>
-        <h3>Built-Ins &amp; <span class="it">Millwork</span></h3>
-        <p>Library walls, media units, mudroom benches, banquettes, paneling, and trim. The structural carpentry that makes a home feel finished.</p>
-      </div>
-      <div class="cat">
-        <div class="num">06</div>
-        <h3>Statement <span class="it">Furniture</span></h3>
-        <p>One-off dining tables, beds, desks, sideboards, and seating. Made in Ethiopian hardwoods to a bespoke commission and signed by the maker.</p>
-      </div>
+    <div class="cap-item">
+      <div class="cap-num">— 02</div>
+      <h3 class="cap-name">Built-in Closets</h3>
+      <p class="cap-desc">Walk-in wardrobes, bedroom closets, and entry built-ins. Designed around your wardrobe, not a catalog. Drawers, hanging zones, shoe walls, and lit interiors.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">— 03</div>
+      <h3 class="cap-name">Vanities & Sink Units</h3>
+      <p class="cap-desc">Bathroom vanities and laundry sink units with integrated stone or wood tops, soft-close drawers, and storage tuned to plumbing and lighting.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">— 04</div>
+      <h3 class="cap-name">Custom Furniture</h3>
+      <p class="cap-desc">One-off pieces — dining tables, headboards, bookcases, desks, and credenzas. Built to fit your space exactly, with materials and proportions chosen for the room.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">— 05</div>
+      <h3 class="cap-name">Interior Doors</h3>
+      <p class="cap-desc">Solid-core interior doors, pivot doors, and concealed-frame doors. Matched to wall finishes and hardware for a seamless architectural look.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">— 06</div>
+      <h3 class="cap-name">Commercial Millwork</h3>
+      <p class="cap-desc">Reception desks, conference tables, retail fixtures, and office built-ins. Production-grade quality with the same craftsmanship as our residential work.</p>
     </div>
   </div>
 </section>
 
-<section class="materials">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div>
-        <div class="eyebrow">Materials</div>
-        <h2 class="sec-title">Local hardwood, <span class="it">imported detail.</span></h2>
+<section class="gallery-section">
+  <span class="eyebrow">— Selected Work</span>
+  <h2 class="section-title">From the <em>workshop.</em></h2>
+
+  <div class="gallery-grid">
+    <article class="gallery-item">
+      <div class="wood-placeholder"><div class="wood-placeholder-tag">Kitchen<br>Cabinetry</div></div>
+      <div class="gallery-overlay">
+        <div class="gallery-meta">Kitchen · Custom Build</div>
+        <div class="gallery-name">Walnut Kitchen Suite</div>
       </div>
+    </article>
+    <article class="gallery-item">
+      <div class="wood-placeholder"><div class="wood-placeholder-tag">Walk-in<br>Closet</div></div>
+      <div class="gallery-overlay">
+        <div class="gallery-meta">Closet · Built-In</div>
+        <div class="gallery-name">Master Wardrobe</div>
+      </div>
+    </article>
+    <article class="gallery-item">
+      <div class="wood-placeholder"><div class="wood-placeholder-tag">Vanity<br>Unit</div></div>
+      <div class="gallery-overlay">
+        <div class="gallery-meta">Bathroom · Vanity</div>
+        <div class="gallery-name">Stone-Top Vanity</div>
+      </div>
+    </article>
+    <article class="gallery-item">
+      <div class="wood-placeholder"><div class="wood-placeholder-tag">Library<br>Built-In</div></div>
+      <div class="gallery-overlay">
+        <div class="gallery-meta">Library · Built-In</div>
+        <div class="gallery-name">Floor-to-Ceiling Library</div>
+      </div>
+    </article>
+    <article class="gallery-item">
+      <div class="wood-placeholder"><div class="wood-placeholder-tag">Custom<br>Doors</div></div>
+      <div class="gallery-overlay">
+        <div class="gallery-meta">Doors · Solid Core</div>
+        <div class="gallery-name">Pivot Entry Doors</div>
+      </div>
+    </article>
+    <article class="gallery-item">
+      <div class="wood-placeholder"><div class="wood-placeholder-tag">Reception<br>Desk</div></div>
+      <div class="gallery-overlay">
+        <div class="gallery-meta">Commercial · Reception</div>
+        <div class="gallery-name">Office Reception Desk</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="gallery-cta">
+    <a href="index.html#contact" class="btn btn-dark">Commission a Piece →</a>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="section-head">
+    <span class="eyebrow">— Why Custom</span>
+    <h2 class="section-title">The case for <em>custom.</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-step">
+      <div class="why-num">— 01</div>
+      <h3 class="why-name">Built for Your Space</h3>
+      <p class="why-desc">No off-the-shelf cabinet ever truly fits. Custom millwork uses every inch — corners, ceiling heights, awkward angles — without compromise.</p>
     </div>
-    <p style="color: rgba(255,255,255,0.6); max-width: 640px; margin: 0;">We work primarily in Ethiopian hardwoods — selected for grain, durability, and origin. Hardware, veneers, and stone come from a small group of trusted suppliers we've worked with for years.</p>
-    <div class="mat-grid reveal">
-      <div class="mat">
-        <div class="mat-name">Tid (Juniper)</div>
-        <p>Aromatic, tight-grained, naturally rot-resistant. Our default for cabinetry frames and structural millwork.</p>
-      </div>
-      <div class="mat">
-        <div class="mat-name">Wanza</div>
-        <p>Deep red-brown with dramatic figure. Used for statement furniture and feature panels.</p>
-      </div>
-      <div class="mat">
-        <div class="mat-name">Zigba (Podo)</div>
-        <p>Light, even-grained, takes finish beautifully. Our choice for closets, vanities, and lighter cabinetry.</p>
-      </div>
-      <div class="mat">
-        <div class="mat-name">Tikur Inchet</div>
-        <p>Black wood — dense, hard, hand-rubbed to a deep luster. Reserved for accents, hardware, and one-off pieces.</p>
-      </div>
+    <div class="why-step">
+      <div class="why-num">— 02</div>
+      <h3 class="why-name">Materials That Last</h3>
+      <p class="why-desc">We choose solid hardwoods and premium plywood cores — not the particle board that warps after a few years in Addis humidity.</p>
+    </div>
+    <div class="why-step">
+      <div class="why-num">— 03</div>
+      <h3 class="why-name">Hardware That Works</h3>
+      <p class="why-desc">Soft-close hinges, full-extension drawer slides, and concealed mounting. Details that you'll feel every day for the next twenty years.</p>
+    </div>
+    <div class="why-step">
+      <div class="why-num">— 04</div>
+      <h3 class="why-name">One Team, One Standard</h3>
+      <p class="why-desc">Same partners, same crew, same workshop. Whether it's a full home or a single closet, you get our complete attention.</p>
     </div>
   </div>
 </section>
 
-<section style="padding: 96px 0;">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div>
-        <div class="eyebrow">From Brief to Delivery</div>
-        <h2 class="sec-title">How a <span class="it">commission</span> works.</h2>
-      </div>
-    </div>
-    <div class="ww-steps reveal">
-      <div class="ww-step">
-        <div class="ww-step-num">01</div>
-        <h3>Brief &amp; Drawing</h3>
-        <p>We start from architect's drawings or a fresh brief. Profiles, materials, and hardware specs are agreed before fabrication.</p>
-      </div>
-      <div class="ww-step">
-        <div class="ww-step-num">02</div>
-        <h3>Sample &amp; Sign-Off</h3>
-        <p>For larger commissions we make a finish sample first — wood, stain, hardware — for client sign-off before production.</p>
-      </div>
-      <div class="ww-step">
-        <div class="ww-step-num">03</div>
-        <h3>Build &amp; Finish</h3>
-        <p>Cut, joinery, sanding, finishing — all in our shop. Hand-finished by the same maker who started the piece.</p>
-      </div>
-      <div class="ww-step">
-        <div class="ww-step-num">04</div>
-        <h3>Install &amp; Tune</h3>
-        <p>We deliver and install on site. Final tuning — alignments, hardware, soft-close adjustment — happens in place.</p>
-      </div>
+<section class="cta-banner">
+  <div class="cta-img">
+    <div class="wood-placeholder"><div class="wood-placeholder-tag">Workshop<br>Detail</div></div>
+  </div>
+  <div class="cta-content">
+    <span class="eyebrow">— Get Started</span>
+    <h2>Have a project in<br><em>mind?</em></h2>
+    <p>Whether it's a single closet or a full kitchen, we'd love to hear what you're building. We respond within one business day.</p>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="index.html#contact" class="btn btn-dark">Request a Quote →</a>
+      <a href="https://wa.me/251937174816" class="btn btn-light">WhatsApp Us</a>
     </div>
   </div>
 </section>
 
-<!-- Client testimonials -->
-<section style="padding: 96px 0; background: var(--cream-alt);">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div>
-        <div class="eyebrow">In Their Words</div>
-        <h2 class="sec-title">What clients <span class="it">say</span> about the shop.</h2>
-      </div>
-    </div>
-    <div class="testimonials reveal">
-      <article class="testi-card">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testi-quote">A walk-in closet that fits the way I actually live. Every drawer, every pull-out — they asked first, then drew it. The Wanza wood is unreal up close.</p>
-        <div class="testi-meta">
-          <div class="testi-avatar" aria-hidden="true">SH</div>
-          <div>
-            <div class="testi-name">Sara H.</div>
-            <div class="testi-role">Old Airport residence</div>
-          </div>
-        </div>
-      </article>
-      <article class="testi-card">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testi-quote">The kitchen is the heart of the house now. Soft-close everywhere, brass that ages well, and a stone-and-wood sink no one we know has. They installed in three days.</p>
-        <div class="testi-meta">
-          <div class="testi-avatar" aria-hidden="true">YT</div>
-          <div>
-            <div class="testi-name">Yodit T.</div>
-            <div class="testi-role">CMC Hillside Villa</div>
-          </div>
-        </div>
-      </article>
-      <article class="testi-card">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testi-quote">We commissioned a 14-seat dining table in Tikur Inchet. The maker came to deliver it, signed it, and showed us how to oil the top. Heirloom-quality work.</p>
-        <div class="testi-meta">
-          <div class="testi-avatar" aria-hidden="true">AB</div>
-          <div>
-            <div class="testi-name">Abel B.</div>
-            <div class="testi-role">Bole residence</div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="container">
-    <h2>Have a piece in <span class="it">mind?</span></h2>
-    <p>Whether it's a single dining table or a whole-house joinery package, we'd like to hear about it. The first conversation is free.</p>
-    <div class="cta-inner" style="margin-top: 28px;">
-      <a href="../contact/" class="btn">Commission a Piece</a>
-      <a href="tel:+251937174816" class="btn btn-outline" style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.6);">+251 93 717 4816</a>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="container">
-    <div class="foot-top">
-      <div class="foot-col foot-brand">
-        <div class="foot-logo">
-          <svg class="logo-mark" viewBox="0 0 60 48" fill="none" aria-hidden="true">
-            <rect x="2" y="10" width="34" height="34" stroke="#fff" stroke-opacity="0.6" stroke-width="1.5" fill="none"/>
-            <rect x="20" y="2" width="18" height="18" stroke="#C8A96E" stroke-width="2" fill="none"/>
-            <rect x="6" y="37" width="7" height="7" stroke="#C8A96E" stroke-width="1.2" fill="none"/>
-            <path d="M 6 36 Q 6 18 24 18" stroke="#C8A96E" stroke-width="1.2" fill="none"/>
-          </svg>
-          <div>
-            <div class="logo-word">2:20 PARTNERS</div>
-            <div class="logo-sub">Design &amp; Construction PLC</div>
-          </div>
-        </div>
-        <p class="foot-blurb">Architecture, build, and bespoke joinery for high-end homes and offices in Addis Ababa, Ethiopia. Drawn carefully. Built once.</p>
-      </div>
-      <div class="foot-col">
-        <div class="foot-h">Studio</div>
-        <a href="../">Home</a>
-        <a href="../services/">Services</a>
-        <a href="../projects/">Projects</a>
-        <a href="../woodworks/">Woodworks</a>
-        <a href="../contact/">Contact</a>
-      </div>
-      <div class="foot-col">
-        <div class="foot-h">Reach Us</div>
-        <a href="tel:+251937174816">+251 93 717 4816</a>
-        <a href="mailto:220partnersplc@gmail.com">220partnersplc@gmail.com</a>
-        <span class="foot-meta">Megenagna, Addis Ababa</span>
-        <span class="foot-meta">Mon–Sat &middot; 9:00–18:00</span>
-      </div>
-      <div class="foot-col">
-        <div class="foot-h">Specialties</div>
-        <span class="foot-meta">Custom Kitchens</span>
-        <span class="foot-meta">Walk-In Closets</span>
-        <span class="foot-meta">Vanities &amp; Joinery</span>
-        <span class="foot-meta">Stone-and-Wood Sinks</span>
-        <span class="foot-meta">Statement Furniture</span>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div class="foot-copy">© 2026 2:20 Partners Design &amp; Construction PLC · Addis Ababa, Ethiopia</div>
-      <div class="foot-legal"><a href="../">Home</a> · <a href="../contact/">Contact</a> · TIN registered with MoR</div>
-    </div>
-  </div>
+  <a href="index.html" class="footer-logo" aria-label="2:20 Partners home">
+    <img src="images/logo-light.png" alt="2:20 Partners Design & Construction PLC">
+  </a>
+  <div class="footer-copy">© 2026 2:20 Partners Design & Construction PLC<br>All rights reserved · Addis Ababa, Ethiopia</div>
 </footer>
 
-<a href="tel:+251937174816" class="fab-call" aria-label="Call 2:20 Partners — +251 93 717 4816">
-  <span class="fab-icon" aria-hidden="true">
-    <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-  </span>
-  <span class="fab-label">
-    <small>Tap to Call</small>
-    <strong>+251 93 717 4816</strong>
-  </span>
-</a>
-
-<script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
 </body>
 </html>
