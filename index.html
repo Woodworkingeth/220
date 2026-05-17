@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  ================================================================
+  ================================================================F
   2:20 PARTNERS DESIGN & CONSTRUCTION PLC
   ================================================================
   
@@ -275,6 +275,58 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  <button id="custom-hamburger-btn" aria-label="Toggle Menu" style="background: none; border: none; font-size: 30px; cursor: pointer; color: #222; display: none; padding: 5px 10px; z-index: 9999;">☰</button>
+
+<style>
+  /* This CSS only kicks in on mobile screens */
+  @media (max-width: 768px) {
+    #custom-hamburger-btn {
+      display: block !important; /* Force the button to show on mobile */
+    }
+    
+    /* Hide your existing navigation menu by default on mobile */
+    header.nav nav, header nav, .nav nav {
+      display: none !important;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      width: 100%;
+      background-color: #fcfbfa; /* Matches your clean cream background */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      box-sizing: border-box;
+      z-index: 9998;
+    }
+
+    /* Show the navigation menu when toggled open */
+    header.nav nav.show-mobile-menu, header nav.show-mobile-menu, .nav nav.show-mobile-menu {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 15px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('custom-hamburger-btn');
+    const nav = document.querySelector('header.nav nav') || document.querySelector('header nav') || document.querySelector('nav');
+    
+    if (btn && nav) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        nav.classList.toggle('show-mobile-menu');
+        
+        // Swaps the icon between ☰ and ✕ when clicked
+        if (nav.classList.contains('show-mobile-menu')) {
+          btn.innerHTML = '✕';
+        } else {
+          btn.innerHTML = '☰';
+        }
+      });
+    }
+  });
+</script>
 </header>
 
 <main>
