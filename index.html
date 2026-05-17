@@ -509,6 +509,15 @@
   </a>
   <div class="footer-copy">© 2026 2:20 Partners Design & Construction PLC<br>All rights reserved · Addis Ababa, Ethiopia</div>
 </footer>
-
-</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.nav-toggle') || document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav') || document.querySelector('nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', function() {
+        nav.classList.toggle('active');
+      });
+    }
+  });
+</script></body>
 </html>
