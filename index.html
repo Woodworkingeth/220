@@ -275,34 +275,50 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <button id="custom-hamburger-btn" aria-label="Toggle Menu" style="background: none; border: none; font-size: 30px; cursor: pointer; color: #222; display: none; padding: 5px 10px; z-index: 9999;">☰</button>
+  <button id="custom-hamburger-btn" aria-label="Toggle Menu" style="background: none; border: none; font-size: 30px; cursor: pointer; color: #222; display: none; position: absolute; right: 20px; top: 15px; z-index: 99999;">☰</button>
 
 <style>
-  /* This CSS only kicks in on mobile screens */
+  /* Force the parent header to show dropdown items */
+  header.nav, header, .nav {
+    overflow: visible !important;
+    position: relative;
+  }
+
   @media (max-width: 768px) {
     #custom-hamburger-btn {
-      display: block !important; /* Force the button to show on mobile */
+      display: block !important;
     }
     
-    /* Hide your existing navigation menu by default on mobile */
+    /* Target the navigation container aggressively */
     header.nav nav, header nav, .nav nav {
       display: none !important;
       position: absolute;
-      top: 60px; 
+      top: 100%; /* Sits exactly under the header bar */
       left: 0;
       width: 100%;
-      background-color: #fcfbfa; /* Matches your clean cream background */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      padding: 20px;
+      background-color: #fcfbfa !important; /* Cream background */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 30px 20px !important;
       box-sizing: border-box;
-      z-index: 9998;
+      z-index: 99998 !important;
     }
 
-    /* Show the navigation menu when toggled open */
+    /* When open, force the container to show and stack links vertically */
     header.nav nav.show-mobile-menu, header nav.show-mobile-menu, .nav nav.show-mobile-menu {
       display: flex !important;
       flex-direction: column !important;
-      gap: 15px;
+      gap: 20px !important;
+    }
+
+    /* Force all links inside the mobile menu to be dark and visible */
+    header nav.show-mobile-menu a, .nav nav.show-mobile-menu a, header nav.show-mobile-menu span, .nav nav.show-mobile-menu span {
+      color: #1a1a1a !important;
+      display: block !important;
+      font-size: 20px !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      width: 100%;
+      text-align: center;
     }
   }
 </style>
@@ -310,6 +326,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const btn = document.getElementById('custom-hamburger-btn');
+    // Finds whatever navigation container Claude generated
     const nav = document.querySelector('header.nav nav') || document.querySelector('header nav') || document.querySelector('nav');
     
     if (btn && nav) {
@@ -317,7 +334,7 @@
         e.preventDefault();
         nav.classList.toggle('show-mobile-menu');
         
-        // Swaps the icon between ☰ and ✕ when clicked
+        // Changes icon between ☰ and ✕ on click
         if (nav.classList.contains('show-mobile-menu')) {
           btn.innerHTML = '✕';
         } else {
