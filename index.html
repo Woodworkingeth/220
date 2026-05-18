@@ -489,8 +489,45 @@
     .nav-call-mobile { display: none !important; }
     .home-hero-text h1 { font-size: clamp(48px, 18vw, 70px) !important; }
   }
+@media (max-width:768px){
 
-</style>
+  .menu-toggle{
+    width:48px !important;
+    height:48px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+
+    justify-content:center !important;
+    align-items:center !important;
+
+    gap:5px !important;
+
+    background:#f5f1e8 !important;
+
+    border:1px solid rgba(0,0,0,.12) !important;
+
+    border-radius:50% !important;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08) !important;
+
+    padding:0 !important;
+
+    z-index:9999 !important;
+  }
+
+  .menu-toggle span{
+    width:22px !important;
+    height:2px !important;
+
+    background:#1c1a16 !important;
+
+    border-radius:999px !important;
+
+    display:block !important;
+  }
+
+}</style>
 </head>
 <body>
 <!-- Upload this file as /index.html. Keep images in /images and project SVGs in /images/projects exactly as shown in Finder. -->
