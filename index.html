@@ -480,61 +480,50 @@
       justify-content: center !important;
     }
   }
-
-  @media (max-width: 430px) {
-    .nav-inner { padding-left: 12px !important; padding-right: 12px !important; }
-    .logo-mark { width: 46px !important; height: 38px !important; flex-basis: 46px !important; }
-    .logo-word { font-size: 15px !important; letter-spacing: .12em !important; }
-    .logo-sub { font-size: 8px !important; letter-spacing: .16em !important; }
-    .nav-call-mobile { display: none !important; }
-    .home-hero-text h1 { font-size: clamp(48px, 18vw, 70px) !important; }
-  }
 @media (max-width:768px){
 
+  button.menu-toggle,
   .menu-toggle{
     width:48px !important;
     height:48px !important;
+    min-width:48px !important;
+    max-width:48px !important;
 
     display:flex !important;
     flex-direction:column !important;
-
-    justify-content:center !important;
     align-items:center !important;
+    justify-content:center !important;
 
     gap:5px !important;
 
     background:#f5f1e8 !important;
-
-    border:1px solid rgba(0,0,0,.12) !important;
-
+    border:1px solid rgba(0,0,0,.15) !important;
     border-radius:50% !important;
 
-    box-shadow:0 4px 12px rgba(0,0,0,.08) !important;
-
     padding:0 !important;
-
-    z-index:9999 !important;
+    margin:0 !important;
+    overflow:hidden !important;
   }
 
+  button.menu-toggle span,
   .menu-toggle span{
+    display:block !important;
+
     width:22px !important;
+    min-width:22px !important;
+    max-width:22px !important;
+
     height:2px !important;
+    min-height:2px !important;
+    max-height:2px !important;
+
+    flex:none !important;
 
     background:#1c1a16 !important;
-
     border-radius:999px !important;
 
-    display:block !important;
-  }
-@media (max-width:768px){
-
-  .menu-toggle span{
-    width:22px !important;
-    max-width:22px !important;
-    min-width:22px !important;
-    height:2px !important;
-    flex:0 0 2px !important;
-    background:#1c1a16 !important;
+    padding:0 !important;
+    margin:0 !important;
   }
 
 }
