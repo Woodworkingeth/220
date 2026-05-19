@@ -83,7 +83,7 @@ section { padding: 120px 0; }
   display: inline-flex; align-items: center; gap: 56px;
 }
 .ann-track span::after {
-  content: "✦"; color: var(--gold); font-size: 10px;
+  content: "\2726"; color: var(--gold); font-size: 10px;
 }
 @keyframes ann-scroll {
   0%   { transform: translateX(0); }
@@ -110,7 +110,8 @@ nav.top {
   display: flex; align-items: center; justify-content: space-between;
 }
 .logo { display: flex; align-items: center; gap: 14px; }
-.logo-mark { width: 52px; height: 42px; }
+.logo-mark { width: 52px; height: 42px; flex-shrink: 0; }
+.logo-mark[src] { object-fit: contain; display: block; }
 .logo-word {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
@@ -173,10 +174,9 @@ nav.top {
   position: relative;
 }
 .btn::after {
-  content: "→"; font-size: 14px; transition: transform .3s ease;
-  letter-spacing: 0;
+  content: "";
+  display: none;
 }
-.btn:hover::after { transform: translateX(4px); }
 .btn-dark    { background: var(--ink); color: #fff; }
 .btn-dark:hover { background: #000; }
 .btn-gold    { background: var(--gold); color: #fff; }
@@ -223,7 +223,7 @@ nav.top {
   font-weight: 500;
   flex-shrink: 0;
 }
-.link-arrow::after { content: "  →"; }
+.link-arrow::after { content: ""; display: none; }
 
 /* PAGE HERO — sub-pages, redesigned bolder/more editorial */
 .page-hero {
@@ -494,7 +494,7 @@ nav.top {
   box-shadow: var(--shadow-soft);
 }
 .testi-card::before {
-  content: "❝"; position: absolute; top: 8px; left: 24px;
+  content: "\201C"; position: absolute; top: 8px; left: 24px;
   font-family: 'Cormorant Garamond', serif; font-size: 80px;
   color: var(--gold); opacity: 0.55; line-height: 1;
 }
@@ -537,7 +537,7 @@ nav.top {
   overflow: hidden;
 }
 .quote-band::before {
-  content: "❝";
+  content: "\201C";
   position: absolute; top: -40px; left: -10px;
   font-family: 'Cormorant Garamond', serif; font-size: 280px;
   color: var(--gold); opacity: 0.18; line-height: 1;
