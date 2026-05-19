@@ -16,7 +16,7 @@
 <meta property="og:title" content="2:20 Partners | Design-Build Architects &amp; Contractors in Addis Ababa" />
 <meta property="og:description" content="High-end design-build firm in Addis Ababa, Ethiopia. Architecture, construction, and supervision under one roof." />
 <meta property="og:url" content="https://220partnersplc.com/" />
-<meta property="og:image" content="https://220partnersplc.com/images/hero.jpg" />
+<meta property="og:image" content="https://220partnersplc.com/images/hero-rendering.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
@@ -32,8 +32,8 @@
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "GeneralContractor", "ArchitecturalService"],
   "name": "2:20 Partners Design & Construction PLC",
-  "image": "https://220partnersplc.com/images/hero.jpg",
-  "logo": "https://220partnersplc.com/images/logo.png",
+  "image": "https://220partnersplc.com/images/hero-rendering.png",
+  "logo": "https://220partnersplc.com/favicon.svg",
   "url": "https://220partnersplc.com",
   "telephone": "+251937174816",
   "email": "220partnersplc@gmail.com",
@@ -93,14 +93,14 @@
 </script>
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="./images/logo.png" />
-<link rel="apple-touch-icon" href="./images/logo.png" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="apple-touch-icon" href="./favicon.svg" />
 <meta name="theme-color" content="#f2ece1" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="image" href="./images/hero.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="./images/hero-rendering.png" fetchpriority="high" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" />
 
 <!-- Shared stylesheet -->
@@ -329,208 +329,9 @@
     .cta-band h2 { font-size: 38px; }
     .cta-band { padding: 64px 0; }
   }
-
-
-  /* ===== BIS PATCH: mobile header like desktop + reliable GitHub image behavior ===== */
-  @media (max-width: 768px) {
-    html, body { overflow-x: hidden; }
-
-    /* Remove the skinny moving bar on phones so header feels clean like desktop */
-    .ann-bar, .gold-bar { display: none !important; }
-
-    .top {
-      position: sticky !important;
-      top: 0 !important;
-      z-index: 9999 !important;
-      background: var(--cream, #f2ece1) !important;
-      border-bottom: 1px solid var(--line, rgba(0,0,0,.12)) !important;
-    }
-
-    .nav-inner {
-      min-height: 74px !important;
-      padding: 10px 18px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 12px !important;
-    }
-
-    .logo {
-      display: flex !important;
-      align-items: center !important;
-      gap: 12px !important;
-      min-width: 0 !important;
-      flex: 1 1 auto !important;
-    }
-
-    .logo-mark {
-      width: 54px !important;
-      height: 44px !important;
-      flex: 0 0 54px !important;
-    }
-
-    .logo-word {
-      font-size: 18px !important;
-      letter-spacing: .14em !important;
-      line-height: 1.05 !important;
-      white-space: nowrap !important;
-    }
-
-    .logo-sub {
-      font-size: 9px !important;
-      letter-spacing: .22em !important;
-      white-space: nowrap !important;
-    }
-
-    .nav-right {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-end !important;
-      gap: 8px !important;
-      flex: 0 0 auto !important;
-    }
-
-    .nav-call-mobile {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      height: 44px !important;
-      padding: 0 12px !important;
-      border: 1px solid var(--gold, #c8a96e) !important;
-      background: transparent !important;
-      color: var(--ink, #1c1a16) !important;
-      font-size: 11px !important;
-      letter-spacing: .12em !important;
-      text-transform: uppercase !important;
-    }
-
-    .nav-call-mobile svg { width: 15px !important; height: 15px !important; margin-right: 5px !important; fill: currentColor !important; }
-    .nav-right > .btn { display: none !important; }
-
-    .menu-toggle {
-      display: inline-flex !important;
-      width: 44px !important;
-      height: 44px !important;
-      border-radius: 0 !important;
-      border: 1px solid var(--ink, #1c1a16) !important;
-      background: var(--ink, #1c1a16) !important;
-      box-shadow: none !important;
-    }
-
-    .menu-toggle span { background: var(--cream, #f2ece1) !important; }
-
-    .nav-links {
-      display: none !important;
-      position: fixed !important;
-      top: 74px !important;
-      left: 0 !important;
-      right: 0 !important;
-      z-index: 9998 !important;
-      background: var(--cream, #f2ece1) !important;
-      border: 0 !important;
-      border-top: 1px solid var(--line, rgba(0,0,0,.12)) !important;
-      border-bottom: 1px solid var(--line, rgba(0,0,0,.12)) !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,.14) !important;
-      padding: 10px 18px 18px !important;
-      border-radius: 0 !important;
-      flex-direction: column !important;
-    }
-
-    .nav-links.open { display: flex !important; }
-
-    .nav-links a {
-      display: block !important;
-      width: 100% !important;
-      padding: 16px 6px !important;
-      border-bottom: 1px solid var(--line, rgba(0,0,0,.12)) !important;
-      color: var(--ink, #1c1a16) !important;
-      font-size: 13px !important;
-      letter-spacing: .22em !important;
-      text-transform: uppercase !important;
-      text-align: left !important;
-    }
-
-    .nav-links a.active::after { display: none !important; }
-
-    .home-hero { padding-top: 44px !important; }
-    .home-hero-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 34px !important; }
-    .home-hero-text h1 { font-size: clamp(54px, 17vw, 82px) !important; line-height: .9 !important; }
-    .home-hero-text p { font-size: 15px !important; max-width: 96% !important; }
-    .home-hero-cta { display: flex !important; gap: 10px !important; flex-wrap: wrap !important; }
-    .home-hero-visual { min-height: 320px !important; }
-    .home-hero-visual img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
-
-    .projects-grid {
-      grid-template-columns: 1fr !important;
-      height: auto !important;
-      gap: 18px !important;
-    }
-    .proj-tile, .proj-tile.featured {
-      grid-column: auto !important;
-      grid-row: auto !important;
-      aspect-ratio: 4 / 3 !important;
-      min-height: 280px !important;
-    }
-
-    .fab-call {
-      left: 18px !important;
-      right: 18px !important;
-      bottom: 18px !important;
-      width: auto !important;
-      justify-content: center !important;
-    }
-  }
-@media (max-width:768px){
-
-  button.menu-toggle,
-  .menu-toggle{
-    width:48px !important;
-    height:48px !important;
-    min-width:48px !important;
-    max-width:48px !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    gap:5px !important;
-
-    background:#f5f1e8 !important;
-    border:1px solid rgba(0,0,0,.15) !important;
-    border-radius:50% !important;
-
-    padding:0 !important;
-    margin:0 !important;
-    overflow:hidden !important;
-  }
-
-  button.menu-toggle span,
-  .menu-toggle span{
-    display:block !important;
-
-    width:22px !important;
-    min-width:22px !important;
-    max-width:22px !important;
-
-    height:2px !important;
-    min-height:2px !important;
-    max-height:2px !important;
-
-    flex:none !important;
-
-    background:#1c1a16 !important;
-    border-radius:999px !important;
-
-    padding:0 !important;
-    margin:0 !important;
-  }
-
-}
-}</style>
+</style>
 </head>
 <body>
-<!-- Upload this file as /index.html. Keep images in /images and project SVGs in /images/projects exactly as shown in Finder. -->
 
 <!-- ANIMATED ANNOUNCEMENT BAR -->
 <div class="ann-bar" aria-hidden="true">
@@ -553,10 +354,7 @@
 <nav class="top">
   <div class="nav-inner">
     <a href="./" class="logo" aria-label="2:20 Partners home">
-      <svg class="logo-mark" viewBox="0 0 80 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2" y="2" width="76" height="60" fill="none" stroke="#1c1a16" stroke-width="1"/>
-        <text x="40" y="40" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#1c1a16">2:20</text>
-      </svg>
+      <img class="logo-mark" src="./favicon.svg" alt="" width="52" height="42" decoding="async" />
       <div>
         <div class="logo-word">2:20 PARTNERS</div>
         <div class="logo-sub">Design &amp; Construction</div>
@@ -610,7 +408,7 @@
       <div class="home-hero-visual">
         <span class="corner-frame tl"></span>
         <span class="corner-frame br"></span>
-        <img src="./images/hero.jpg" alt="2:20 Partners luxury mid-rise rendering, Addis Ababa, Ethiopia" loading="eager" decoding="async" fetchpriority="high" data-fallback="true" />
+        <img src="./images/hero-rendering.png" alt="2:20 Partners luxury mid-rise rendering, Addis Ababa, Ethiopia" loading="eager" decoding="async" fetchpriority="high" data-fallback="true" />
         <div class="visual-tag">
           <div>
             <small>Featured Project</small>
@@ -666,7 +464,7 @@
       <div class="about-right reveal">
         <span class="corner-frame tl"></span>
         <span class="corner-frame br"></span>
-        <img loading="lazy" decoding="async" src="./images/founders.jpg" alt="2:20 Partners studio — desk with architectural model, blueprint, and material samples" loading="lazy" decoding="async" data-fallback="true" />
+        <img src="./images/studio-desk.svg" alt="2:20 Partners studio — desk with architectural model, blueprint, and material samples" loading="lazy" decoding="async" data-fallback="true" />
       </div>
     </div>
   </div>
@@ -729,35 +527,35 @@
     </div>
     <div class="projects-grid">
       <a href="projects/" class="proj-tile featured reveal">
-        <img loading="lazy" decoding="async" src="./images/projects/project-1.jpg" alt="Megenagna Mixed-Use Tower — 2:20 Partners commercial design-build, Addis Ababa" loading="lazy" decoding="async" data-fallback="true" />
+        <img src="./images/projects/mixed-use.svg" alt="Megenagna Mixed-Use Tower — 2:20 Partners commercial design-build, Addis Ababa" loading="lazy" decoding="async" data-fallback="true" />
         <div class="meta">
           <small>Commercial · 2024 — In Build</small>
           <h4>Megenagna <span class="it">Mixed-Use</span> Tower</h4>
         </div>
       </a>
       <a href="projects/" class="proj-tile reveal">
-        <img loading="lazy" decoding="async" src="./images/projects/project-3.jpg" alt="Bole private villa — luxury home design and construction" loading="lazy" decoding="async" data-fallback="true" />
+        <img src="./images/projects/villa.svg" alt="Bole private villa — luxury home design and construction" loading="lazy" decoding="async" data-fallback="true" />
         <div class="meta">
           <small>Residential · 2023</small>
           <h4>Bole <span class="it">Private</span> Villa</h4>
         </div>
       </a>
       <a href="projects/" class="proj-tile reveal">
-        <img loading="lazy" decoding="async" src="./images/projects/project-4.jpg" alt="Sarbet slim apartment building — wood and glass facade" loading="lazy" decoding="async" data-fallback="true" />
+        <img src="./images/projects/apartment.svg" alt="Sarbet slim apartment building — wood and glass facade" loading="lazy" decoding="async" data-fallback="true" />
         <div class="meta">
           <small>Multi-Family · 2024</small>
           <h4>Sarbet <span class="it">Slim</span> Apartment</h4>
         </div>
       </a>
       <a href="projects/" class="proj-tile reveal">
-        <img loading="lazy" decoding="async" src="./images/projects/project-2.jpg" alt="CMC commercial mid-rise — stone-glass facade" loading="lazy" decoding="async" data-fallback="true" />
+        <img src="./images/projects/commercial-midrise.svg" alt="CMC commercial mid-rise — stone-glass facade" loading="lazy" decoding="async" data-fallback="true" />
         <div class="meta">
           <small>Commercial · 2025</small>
           <h4>CMC <span class="it">Mid-rise</span></h4>
         </div>
       </a>
       <a href="woodworks/" class="proj-tile reveal">
-        <img loading="lazy" decoding="async" src="./images/partners-onsite.jpg" alt="2:20 Woodworks — custom kitchen detail with brass pulls" loading="lazy" decoding="async" data-fallback="true" />
+        <img src="./images/woodworks-detail.svg" alt="2:20 Woodworks — custom kitchen detail with brass pulls" loading="lazy" decoding="async" data-fallback="true" />
         <div class="meta">
           <small>Joinery · 2024</small>
           <h4>2:20 <span class="it">Woodworks</span> Studio</h4>
@@ -963,10 +761,7 @@
   <div class="foot-top">
     <div>
       <div class="foot-logo" style="margin-bottom:18px;">
-        <svg width="44" height="36" viewBox="0 0 80 64" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="76" height="60" fill="none" stroke="#c8a96e" stroke-width="1"/>
-          <text x="40" y="40" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#c8a96e">2:20</text>
-        </svg>
+        <img class="logo-mark" src="./favicon.svg" alt="" width="44" height="36" decoding="async" />
         <div class="logo-word">2:20 PARTNERS</div>
       </div>
       <p>Design-build firm headquartered in Megenagna, Addis Ababa. Architecture, construction, and bespoke joinery — under one roof since 2012.</p>
@@ -984,7 +779,7 @@
       <ul>
         <li><a href="tel:+251937174816">+251 93 717 4816</a></li>
         <li><a href="mailto:220partnersplc@gmail.com">220partnersplc@gmail.com</a></li>
-        <li><a href="contact/">Send a brief →</a></li>
+        <li><a href="contact/">Send a brief</a></li>
       </ul>
     </div>
     <div>
