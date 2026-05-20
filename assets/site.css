@@ -109,9 +109,12 @@ nav.top {
   padding: 0 72px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.logo { display: flex; align-items: center; gap: 14px; }
-.logo-mark { width: 52px; height: 42px; flex-shrink: 0; }
-.logo-mark[src] { object-fit: contain; display: block; }
+.logo { display: flex; align-items: center; gap: 14px; flex-shrink: 0; min-width: 0; }
+.logo-mark {
+  width: 52px; height: 42px; flex-shrink: 0;
+  min-width: 40px; min-height: 32px;
+  object-fit: contain; display: block;
+}
 .logo-word {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
@@ -766,6 +769,9 @@ footer {
   .sec-title { font-size: 36px; }
   .container { padding: 0 28px; }
   .nav-inner, .foot-top, .foot-bottom { padding: 0 28px; }
+  .logo-sub { display: none; }
+  .logo-word { font-size: 18px; letter-spacing: 0.06em; }
+  .logo-mark { width: 44px; height: 36px; min-width: 36px; min-height: 28px; }
   .foot-top { grid-template-columns: 1fr; gap: 32px; padding-top: 0; padding-bottom: 32px; }
   .foot-bottom { flex-direction: column; gap: 16px; text-align: center; padding-top: 24px; }
   section { padding: 72px 0; }
