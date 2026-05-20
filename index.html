@@ -104,7 +104,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" />
 
 <!-- Shared stylesheet -->
-<link rel="stylesheet" href="./assets/site.css" />
+<link rel="stylesheet" href="./assets/site.css?v=4" />
 
 <style>
   /* Page-specific tweaks */
@@ -354,7 +354,7 @@
 <nav class="top">
   <div class="nav-inner">
     <a href="./" class="logo" aria-label="2:20 Partners home">
-      <img class="logo-mark" src="./images/logo.png" alt="" width="52" height="42" decoding="async" />
+      <svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 48" width="52" height="42" aria-hidden="true" focusable="false"><rect x="2" y="10" width="34" height="34" stroke="#1c1a16" stroke-width="1.8" fill="none"/><rect x="20" y="2" width="18" height="18" stroke="#C8A96E" stroke-width="2.2" fill="none"/><rect x="6" y="37" width="7" height="7" stroke="#C8A96E" stroke-width="1.4" fill="none"/><path d="M 6 36 Q 6 18 24 18" stroke="#C8A96E" stroke-width="1.4" fill="none"/></svg>
       <div>
         <div class="logo-word">2:20 PARTNERS</div>
         <div class="logo-sub">Design &amp; Construction</div>
@@ -761,7 +761,7 @@
   <div class="foot-top">
     <div>
       <div class="foot-logo" style="margin-bottom:18px;">
-        <img class="logo-mark" src="./images/logo.png" alt="" width="44" height="36" decoding="async" />
+        <svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 48" width="44" height="36" aria-hidden="true" focusable="false"><rect x="2" y="10" width="34" height="34" stroke="#1c1a16" stroke-width="1.8" fill="none"/><rect x="20" y="2" width="18" height="18" stroke="#C8A96E" stroke-width="2.2" fill="none"/><rect x="6" y="37" width="7" height="7" stroke="#C8A96E" stroke-width="1.4" fill="none"/><path d="M 6 36 Q 6 18 24 18" stroke="#C8A96E" stroke-width="1.4" fill="none"/></svg>
         <div class="logo-word">2:20 PARTNERS</div>
       </div>
       <p>Design-build firm headquartered in Megenagna, Addis Ababa. Architecture, construction, and bespoke joinery — under one roof since 2012.</p>
@@ -827,19 +827,8 @@
       '<text x="600" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#8b7650">Image file missing — check exact file name and folder</text>' +
       '</svg>'
     );
-    var logoFallback = 'data:image/svg+xml;utf8,' + encodeURIComponent(
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 48">' +
-      '<rect x="2" y="10" width="34" height="34" stroke="#1c1a16" stroke-width="1.8" fill="none"/>' +
-      '<rect x="20" y="2" width="18" height="18" stroke="#C8A96E" stroke-width="2.2" fill="none"/>' +
-      '<rect x="6" y="37" width="7" height="7" stroke="#C8A96E" stroke-width="1.4" fill="none"/>' +
-      '<path d="M 6 36 Q 6 18 24 18" stroke="#C8A96E" stroke-width="1.4" fill="none"/></svg>'
-    );
     document.querySelectorAll('img').forEach(function(img){
       img.addEventListener('error', function(){
-        if (img.classList.contains('logo-mark')) {
-          if (img.src !== logoFallback) img.src = logoFallback;
-          return;
-        }
         if (img.src !== fallbackSvg) img.src = fallbackSvg;
       });
     });
