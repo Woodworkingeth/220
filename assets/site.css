@@ -1,11 +1,12 @@
 /* ============================================
    2:20 Partners — Shared site stylesheet
-   Direction B: Warm Editorial — Refined v2
+   Direction B: Warm Editorial — v5 (readability, contrast, Amharic)
    ============================================ */
 :root {
   --gold:        #C8A96E;
   --gold-dark:   #b8922f;
-  --gold-deep:   #8a6a1d;
+  --gold-deep:   #8a6a1d;   /* large headings on cream (passes 3:1) */
+  --gold-text:   #7a5c14;   /* small gold text on cream (passes 4.5:1) */
   --cream:       #f2ece1;
   --cream-alt:   #ece6da;
   --cream-deep:  #e3dccc;
@@ -25,23 +26,39 @@ body {
   font-family: 'DM Sans', system-ui, sans-serif;
   background: var(--cream);
   color: var(--ink);
-  font-size: 14px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
-::selection { background: var(--gold); color: #fff; }
+::selection { background: var(--gold); color: var(--ink); }
+
+/* Readable line breaks */
+h1, h2, h3, h4, .sec-title { text-wrap: balance; }
+p, blockquote { text-wrap: pretty; }
+
+/* Visible keyboard focus */
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--gold-text);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 2000;
+  background: var(--ink); color: #fff; padding: 10px 16px; font-size: 14px;
+}
+.skip-link:focus { top: 12px; }
 
 .serif { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
 .italic { font-style: italic; }
 
 .eyebrow {
-  font-size: 10px;
-  letter-spacing: 0.32em;
+  font-size: 12px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-weight: 500;
   display: inline-flex; align-items: center; gap: 12px;
 }
@@ -73,13 +90,13 @@ section { padding: 120px 0; }
 .ann-track {
   display: flex; gap: 56px;
   white-space: nowrap;
-  animation: ann-scroll 38s linear infinite;
+  animation: ann-scroll 70s linear infinite;
   padding: 11px 0;
   width: max-content;
 }
 .ann-track span {
-  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
-  color: rgba(242,236,225,0.78);
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(242,236,225,0.85);
   display: inline-flex; align-items: center; gap: 56px;
 }
 .ann-track span::after {
@@ -129,10 +146,10 @@ svg.logo-mark { overflow: visible; }
 .logo-sub {
   display: flex; align-items: center; gap: 8px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 8px;
-  letter-spacing: 0.22em;
+  font-size: 9px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   margin-top: 4px;
 }
 .logo-sub::before, .logo-sub::after {
@@ -141,8 +158,8 @@ svg.logo-mark { overflow: visible; }
 .nav-right { display: flex; align-items: center; gap: 36px; }
 .nav-links { display: flex; gap: 32px; }
 .nav-links a {
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-mid);
   transition: color .25s ease;
@@ -167,11 +184,11 @@ svg.logo-mark { overflow: visible; }
 /* BUTTONS */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 30px;
-  font-size: 10px;
-  letter-spacing: 0.22em;
+  padding: 15px 28px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all .3s ease;
@@ -185,8 +202,8 @@ svg.logo-mark { overflow: visible; }
 }
 .btn-dark    { background: var(--ink); color: #fff; }
 .btn-dark:hover { background: #000; }
-.btn-gold    { background: var(--gold); color: #fff; }
-.btn-gold:hover { background: var(--gold-dark); }
+.btn-gold    { background: var(--gold); color: var(--ink); }
+.btn-gold:hover { background: #d6bb85; }
 .btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
 .btn-outline:hover { background: var(--ink); color: #fff; }
 .btn-ghost   { background: transparent; color: var(--ink); border: 1px solid var(--line-mid); }
@@ -232,19 +249,19 @@ svg.logo-mark { overflow: visible; }
 .sec-head .eyebrow { margin-bottom: 16px; }
 .sec-title {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 56px;
-  line-height: 1;
+  line-height: 1.08;
   color: var(--ink);
   letter-spacing: -0.01em;
   margin: 0;
 }
-.sec-title .it { font-style: italic; color: var(--gold); }
+.sec-title .it { font-style: italic; color: var(--gold-deep); }
 .link-arrow {
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 12px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   border-bottom: 1px solid var(--gold);
   padding-bottom: 4px;
   font-weight: 500;
@@ -265,7 +282,7 @@ svg.logo-mark { overflow: visible; }
   width: 700px; height: 700px;
   background: radial-gradient(circle, rgba(200,169,110,0.18), transparent 60%);
   pointer-events: none;
-  animation: hero-glow 14s ease-in-out infinite alternate;
+  animation: none;
 }
 @keyframes hero-glow {
   0%   { transform: translate(0,0) scale(1); opacity: 0.7; }
@@ -274,8 +291,8 @@ svg.logo-mark { overflow: visible; }
 .page-hero .container { position: relative; z-index: 2; }
 .page-hero .crumbs {
   display: flex; align-items: center; gap: 10px;
-  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--ink-light); margin-bottom: 32px;
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-mid); margin-bottom: 32px;
 }
 .page-hero .crumbs a { color: var(--ink-mid); }
 .page-hero .crumbs a:hover { color: var(--gold); }
@@ -283,15 +300,15 @@ svg.logo-mark { overflow: visible; }
 .page-hero .eyebrow { margin-bottom: 22px; }
 .page-hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 96px;
-  line-height: 0.95;
+  line-height: 1.02;
   color: var(--ink);
   letter-spacing: -0.02em;
   margin: 0 0 32px;
   max-width: 1100px;
 }
-.page-hero h1 .it { font-style: italic; color: var(--gold-dark); }
+.page-hero h1 .it { font-style: italic; color: var(--gold-deep); }
 .page-hero h1 .word-anim {
   display: inline-block;
   opacity: 0; transform: translateY(20px);
@@ -303,7 +320,7 @@ svg.logo-mark { overflow: visible; }
 .page-hero p.lede {
   color: var(--ink-mid);
   max-width: 680px;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.7;
   margin: 0;
 }
@@ -314,8 +331,8 @@ svg.logo-mark { overflow: visible; }
 }
 .page-hero .hero-meta div { display: flex; flex-direction: column; gap: 4px; }
 .page-hero .hero-meta small {
-  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gold-dark); font-weight: 500;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-text); font-weight: 500;
 }
 .page-hero .hero-meta strong {
   font-family: 'Cormorant Garamond', serif; font-weight: 400;
@@ -344,12 +361,12 @@ svg.logo-mark { overflow: visible; }
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   font-size: 108px;
-  line-height: 0.92;
+  line-height: 0.98;
   letter-spacing: -0.025em;
   margin: 0 0 36px;
   color: var(--ink);
 }
-.home-hero-text h1 .it { font-style: italic; color: var(--gold-dark); }
+.home-hero-text h1 .it { font-style: italic; color: var(--gold-deep); }
 .home-hero-text h1 .underline-it {
   position: relative; display: inline-block;
 }
@@ -361,7 +378,7 @@ svg.logo-mark { overflow: visible; }
 }
 .home-hero-text p {
   color: var(--ink-mid);
-  font-size: 18px; line-height: 1.7;
+  font-size: 19px; line-height: 1.7;
   max-width: 560px;
   margin: 0 0 40px;
 }
@@ -385,11 +402,11 @@ svg.logo-mark { overflow: visible; }
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  animation: ken-burns 18s ease-in-out infinite alternate;
+  animation: ken-burns 30s ease-in-out infinite alternate;
 }
 @keyframes ken-burns {
   0%   { transform: scale(1.0)  translate(0, 0); }
-  100% { transform: scale(1.12) translate(-1.5%, -1.5%); }
+  100% { transform: scale(1.06) translate(-1%, -1%); }
 }
 .home-hero-visual .visual-tag {
   position: absolute; bottom: 24px; left: 24px; right: 24px; z-index: 3;
@@ -398,7 +415,7 @@ svg.logo-mark { overflow: visible; }
 }
 .home-hero-visual .visual-tag div { display: flex; flex-direction: column; }
 .home-hero-visual .visual-tag small {
-  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--gold); font-weight: 500;
 }
 .home-hero-visual .visual-tag strong {
@@ -409,7 +426,7 @@ svg.logo-mark { overflow: visible; }
   background: rgba(200,169,110,0.95);
   color: var(--ink);
   padding: 8px 14px;
-  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
   font-weight: 600;
 }
 .home-hero-visual .corner-frame {
@@ -445,8 +462,8 @@ svg.logo-mark { overflow: visible; }
 }
 .stat .num .it { font-style: italic; }
 .stat .lab {
-  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
-  color: rgba(255,255,255,0.6); margin-top: 12px; font-weight: 500;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.72); margin-top: 12px; font-weight: 500;
 }
 
 /* WORKFLOW / PROCESS */
@@ -492,12 +509,12 @@ svg.logo-mark { overflow: visible; }
 }
 .wf-step h4 {
   font-family: 'Cormorant Garamond', serif; font-weight: 400;
-  font-size: 22px; line-height: 1.2; margin: 0 0 12px;
+  font-size: 24px; line-height: 1.2; margin: 0 0 12px;
   color: var(--ink);
 }
 .wf-step p {
-  font-size: 13px; color: var(--ink-mid); line-height: 1.65;
-  margin: 0; max-width: 220px; margin-left: auto; margin-right: auto;
+  font-size: 15px; color: var(--ink-mid); line-height: 1.65;
+  margin: 0; max-width: 240px; margin-left: auto; margin-right: auto;
 }
 
 /* TESTIMONIALS */
@@ -543,17 +560,17 @@ svg.logo-mark { overflow: visible; }
 }
 .testi-avatar {
   width: 44px; height: 44px; border-radius: 50%;
-  background: var(--gold); color: #fff;
+  background: var(--gold); color: var(--ink);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Cormorant Garamond', serif; font-weight: 400;
   font-size: 18px; font-style: italic;
   flex-shrink: 0;
 }
 .testi-author-info { display: flex; flex-direction: column; line-height: 1.3; }
-.testi-author-info strong { font-size: 13px; font-weight: 600; color: var(--ink); }
+.testi-author-info strong { font-size: 15px; font-weight: 600; color: var(--ink); }
 .testi-author-info small {
-  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--gold-dark); margin-top: 2px;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold-text); margin-top: 2px;
 }
 
 /* FEATURED QUOTE BAND */
@@ -580,8 +597,8 @@ svg.logo-mark { overflow: visible; }
 }
 .quote-band cite {
   display: block; margin-top: 32px;
-  font-style: normal; font-size: 11px;
-  letter-spacing: 0.28em; text-transform: uppercase;
+  font-style: normal; font-size: 12px;
+  letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--gold);
 }
 
@@ -599,17 +616,17 @@ footer {
 }
 .foot-top h5 {
   font-family: 'DM Sans', sans-serif;
-  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--gold); font-weight: 500;
   margin: 0 0 22px;
 }
 .foot-top p {
-  font-size: 13px; color: rgba(255,255,255,0.55);
+  font-size: 15px; color: rgba(255,255,255,0.68);
   line-height: 1.7;
 }
 .foot-top ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .foot-top a {
-  font-size: 13px; color: rgba(255,255,255,0.55);
+  font-size: 15px; color: rgba(255,255,255,0.72);
   transition: color .25s ease;
 }
 .foot-top a:hover { color: var(--gold); }
@@ -620,7 +637,7 @@ footer {
 }
 .foot-logo { display: flex; align-items: center; gap: 12px; }
 .foot-logo .logo-word { color: rgba(255,255,255,0.7); font-size: 16px; }
-.foot-copy { font-size: 11px; color: rgba(255,255,255,0.35); }
+.foot-copy { font-size: 13px; color: rgba(255,255,255,0.55); }
 
 /* FAB — bigger, bolder, shows phone number */
 .fab-call {
@@ -632,7 +649,7 @@ footer {
   align-items: center;
   gap: 14px;
   background: var(--gold);
-  color: #fff;
+  color: var(--ink);
   padding: 18px 28px 18px 22px;
   border-radius: 999px;
   font-family: 'DM Sans', sans-serif;
@@ -653,7 +670,7 @@ footer {
   width: 28px; height: 28px;
   display: inline-flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  background: rgba(255,255,255,0.18);
+  background: rgba(28,26,22,0.10);
   border-radius: 50%;
   padding: 4px;
   box-sizing: content-box;
@@ -661,7 +678,7 @@ footer {
 .fab-call .fab-icon svg { width: 26px; height: 26px; fill: currentColor; }
 .fab-call .fab-label { display: inline-flex; flex-direction: column; line-height: 1.05; }
 .fab-call .fab-label small {
-  font-size: 9px; font-weight: 500; letter-spacing: 0.22em;
+  font-size: 10px; font-weight: 500; letter-spacing: 0.14em;
   text-transform: uppercase; opacity: 0.85;
   margin-bottom: 3px;
 }
@@ -669,7 +686,7 @@ footer {
 .fab-call::before {
   content: ""; position: absolute; inset: -2px; border-radius: 999px;
   border: 2px solid var(--gold); opacity: 0.6;
-  animation: fab-pulse 2.2s ease-out infinite;
+  animation: fab-pulse 2.2s ease-out 3;
   pointer-events: none;
 }
 @keyframes fab-pulse {
@@ -707,8 +724,8 @@ footer {
 }
 .card .num {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic; font-size: 14px;
-  color: var(--gold-dark); letter-spacing: 0.1em;
+  font-style: italic; font-size: 16px;
+  color: var(--gold-text); letter-spacing: 0.1em;
   margin-bottom: 18px;
 }
 .card h3 {
@@ -716,9 +733,9 @@ footer {
   font-size: 28px; line-height: 1.15; margin: 0 0 14px;
   color: var(--ink);
 }
-.card h3 .it { font-style: italic; color: var(--gold-dark); }
+.card h3 .it { font-style: italic; color: var(--gold-deep); }
 .card p {
-  font-size: 13.5px; color: var(--ink-mid); line-height: 1.75;
+  font-size: 15.5px; color: var(--ink-mid); line-height: 1.7;
   margin: 0;
 }
 
@@ -763,13 +780,13 @@ footer {
   .nav-call-mobile { display: inline-flex; }
   .nav-inner .btn-dark { display: none; }
   body.nav-open { overflow: hidden; }
-  .ann-track { animation-duration: 24s; }
-  .ann-track span { font-size: 10px; gap: 36px; }
+  .ann-track { animation-duration: 55s; }
+  .ann-track span { font-size: 11px; gap: 36px; letter-spacing: 0.12em; }
   .pill { padding: 9px 16px; font-size: 11px; }
-  .btn { padding: 14px 24px; font-size: 11px; min-height: 44px; }
+  .btn { padding: 14px 22px; font-size: 12px; min-height: 48px; justify-content: center; }
   .field input, .field select, .field textarea { font-size: 16px; }
   .sec-head { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .sec-title { font-size: 36px; }
+  .sec-title { font-size: 36px; line-height: 1.12; }
   .container { padding: 0 28px; }
   .nav-inner, .foot-top, .foot-bottom { padding: 0 28px; }
   .logo-sub { display: none; }
@@ -779,13 +796,14 @@ footer {
   .foot-bottom { flex-direction: column; gap: 16px; text-align: center; padding-top: 24px; }
   section { padding: 72px 0; }
   .page-hero { padding: 64px 0 56px; }
-  .page-hero h1 { font-size: 46px; }
-  .page-hero p.lede { font-size: 15px; }
+  .page-hero h1 { font-size: 44px; line-height: 1.05; }
+  .page-hero p.lede { font-size: 17px; }
   .page-hero .hero-meta { gap: 24px; }
   .page-hero .hero-meta strong { font-size: 22px; }
   .home-hero { padding: 48px 0 60px; }
-  .home-hero-text h1 { font-size: 54px; line-height: 0.96; }
-  .home-hero-text p { font-size: 16px; }
+  .home-hero-text h1 { font-size: 50px; line-height: 1.02; font-weight: 400; }
+  .home-hero-text p { font-size: 17px; }
+  .home-hero-cta .btn { flex: 1 1 auto; }
   .stats-strip { padding: 48px 0; }
   .stats-strip .container { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .stat .num { font-size: 56px; }
@@ -796,18 +814,21 @@ footer {
   .card { padding: 28px 24px; }
   .card h3 { font-size: 24px; }
   .nav-links { display: none !important; flex-direction: column; gap: 0;
-               position: absolute; top: 100%; left: 0; right: 0;
-               background: var(--cream); padding: 8px 0;
-               border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-               box-shadow: 0 12px 32px rgba(0,0,0,0.10); z-index: 150; width: 100%; }
+               position: absolute; top: calc(100% + 8px); left: 16px; right: 16px; width: auto;
+               background: #fff; padding: 8px;
+               border: 1px solid var(--line); border-radius: 16px;
+               box-shadow: 0 18px 50px rgba(28,26,22,0.14); z-index: 1001; }
   .nav-links.open { display: flex !important; }
-  .nav-links a { padding: 14px 28px; border-bottom: 1px solid var(--line); }
+  .nav-links a { display: block; padding: 16px 18px; font-size: 14px; color: var(--ink); letter-spacing: 0.08em; border-bottom: 1px solid var(--line); }
+  .nav-links a.active { color: var(--gold-text); }
   .nav-links a:last-child { border-bottom: 0; }
   .nav-links a.active::after, .nav-links a:hover::after { display: none; }
   .menu-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
   .menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .menu-toggle span { transition: transform .2s ease, opacity .2s ease; }
+  .nav-right { gap: 10px; }
+  .lang-switch a { padding: 6px 9px; }
   footer { padding-bottom: 110px; }
   .gold-bar { height: 2px; }
 }
@@ -818,13 +839,76 @@ footer {
     font-size: 15px;
     bottom: calc(16px + env(safe-area-inset-bottom));
     right: calc(16px + env(safe-area-inset-right));
-    left: calc(16px + env(safe-area-inset-left));
-    justify-content: center;
   }
   .fab-call .fab-icon { width: 24px; height: 24px; padding: 3px; }
   .fab-call .fab-icon svg { width: 22px; height: 22px; }
-  .fab-call .fab-label small { font-size: 8px; letter-spacing: 0.18em; margin-bottom: 2px; }
+  .fab-call .fab-label small { font-size: 9px; letter-spacing: 0.12em; margin-bottom: 2px; }
   .fab-call .fab-label strong { font-size: 15px; }
+  .nav-call-mobile { display: none; } /* the floating call button covers this on phones */
+}
+
+/* ============================================
+   LANGUAGE SWITCH  (EN | አማ)
+   ============================================ */
+.lang-switch {
+  display: inline-flex; align-items: center;
+  border: 1px solid var(--line-mid); border-radius: 999px;
+  overflow: hidden; flex-shrink: 0;
+}
+.lang-switch a {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+  padding: 6px 12px; color: var(--ink-mid); line-height: 1.4;
+  transition: background .2s ease, color .2s ease;
+}
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a.active { background: var(--ink); color: #fff; }
+.lang-switch a[lang="am"] { font-family: 'Noto Sans Ethiopic', 'Nyala', 'Kefa', 'DM Sans', sans-serif; letter-spacing: 0; }
+
+/* ============================================
+   AMHARIC / ETHIOPIC — used by /am/ pages (<html lang="am">).
+   Ethiopic has no italics or capitals, and wide letter-spacing
+   hurts reading, so those effects are switched off here.
+   ============================================ */
+body:lang(am) {
+  font-family: 'Noto Sans Ethiopic', 'Nyala', 'Kefa', 'DM Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+}
+:lang(am) h1, :lang(am) h2, :lang(am) h3, :lang(am) h4,
+:lang(am) .sec-title, :lang(am) blockquote,
+:lang(am) .stat .num, :lang(am) .hero-meta strong,
+:lang(am) .visual-tag strong {
+  font-family: 'Noto Serif Ethiopic', 'Noto Sans Ethiopic', 'Nyala', serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+:lang(am) .home-hero-text h1 { font-size: 64px; line-height: 1.25; }
+:lang(am) .page-hero h1      { font-size: 56px; line-height: 1.25; }
+:lang(am) .sec-title         { font-size: 40px; line-height: 1.3; }
+:lang(am) .quote-band blockquote { font-size: 30px; line-height: 1.6; }
+:lang(am) .testi-card blockquote { font-size: 18px; line-height: 1.75; }
+/* Ethiopic has no true italic — never fake-slant it */
+html:lang(am) .it, html:lang(am) em, html:lang(am) blockquote { font-style: normal !important; }
+:lang(am) .eyebrow, :lang(am) .nav-links a, :lang(am) .btn, :lang(am) .link-arrow,
+:lang(am) .stat .lab, :lang(am) .ann-track span, :lang(am) .foot-top h5,
+:lang(am) small, :lang(am) .badge {
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+:lang(am) .eyebrow { font-size: 14px; }
+:lang(am) .nav-links a, :lang(am) .btn { font-size: 14px; }
+:lang(am) .logo-word, :lang(am) .logo-sub { font-family: 'Cormorant Garamond', serif; } /* brand stays Latin */
+@media (max-width: 1024px) {
+  :lang(am) .home-hero-text h1 { font-size: 52px; }
+  :lang(am) .sec-title { font-size: 34px; }
+}
+@media (max-width: 768px) {
+  :lang(am) .home-hero-text h1 { font-size: 38px; line-height: 1.3; }
+  :lang(am) .page-hero h1 { font-size: 34px; }
+  :lang(am) .sec-title { font-size: 28px; line-height: 1.4; }
+  :lang(am) .quote-band blockquote { font-size: 22px; }
+  :lang(am) .nav-links a { font-size: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
