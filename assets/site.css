@@ -931,6 +931,17 @@ img.partner-avatar {
 .sec-head .eyebrow::before { background: var(--gold); width: 18px; }
 :lang(am) .sec-head .eyebrow { letter-spacing: 0.02em; }
 
+/* Reviews call-out (points to real Google reviews) */
+.reviews-cta {
+  background: #fff; border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  padding: 40px 44px; max-width: 900px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.reviews-cta p { font-size: 18px; line-height: 1.7; color: var(--ink-mid); margin: 0; max-width: 680px; }
+.reviews-cta .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 768px) { .reviews-cta { padding: 28px 24px; } .reviews-cta p { font-size: 16px; } }
+
 /* ============================================
    LANGUAGE SWITCH  (EN | አማ)
    ============================================ */
