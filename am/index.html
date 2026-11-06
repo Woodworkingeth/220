@@ -37,7 +37,9 @@
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "GeneralContractor", "ArchitecturalService"],
   "name": "2:20 Partners Design & Construction PLC",
-  "image": "https://220partnersplc.com/images/hero.jpg",
+  "image": ["https://220partnersplc.com/images/home/luxury-villa-addis-ababa-lg.jpg", "https://220partnersplc.com/images/home/mixed-use-building-addis-ababa-lg.jpg", "https://220partnersplc.com/images/home/construction-site-supervision-addis-ababa-lg.jpg"],
+  "knowsLanguage": ["en", "am"],
+  "foundingDate": "2012",
   "logo": "https://220partnersplc.com/images/logo-mark.png",
   "url": "https://220partnersplc.com",
   "telephone": "+251937174816",
@@ -74,6 +76,10 @@
     ]
   }
 }
+</script>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "2:20 Partners Design & Construction PLC", "url": "https://220partnersplc.com/", "inLanguage": ["am", "en"]}
 </script>
 
 <!-- JSON-LD: FAQ schema (Amharic) -->
@@ -135,11 +141,12 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="image" href="../images/hero.jpg" fetchpriority="high" />
+<link rel="preload" as="image" type="image/webp" media="(min-width: 769px)" href="../images/home/luxury-villa-addis-ababa-lg.webp" imagesrcset="../images/home/luxury-villa-addis-ababa-800.webp 800w, ../images/home/luxury-villa-addis-ababa-lg.webp 1600w" imagesizes="100vw" fetchpriority="high" />
+<link rel="preload" as="image" type="image/webp" media="(max-width: 768px)" href="../images/home/mixed-use-building-addis-ababa-800.webp" fetchpriority="high" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans+Ethiopic:wght@400;500;600&amp;family=Noto+Serif+Ethiopic:wght@500;600&amp;display=swap" />
 
 <!-- Shared stylesheet -->
-<link rel="stylesheet" href="../assets/site.css?v=7" />
+<link rel="stylesheet" href="../assets/site.css?v=8" />
 
 <style>
   /* Page-specific tweaks */
@@ -358,40 +365,32 @@
   </div>
 </nav>
 
-<!-- HOME HERO -->
-<header class="home-hero" id="main">
-  <div class="container">
-    <div class="home-hero-grid">
-      <div class="home-hero-text">
-        <div class="eyebrow">ሥነ ሕንፃ · ግንባታ · የእንጨት ሥራ — አዲስ አበባ</div>
-        <h1>
-          <span class="word-anim" style="animation-delay:.05s">ራዕይ</span>
+<!-- HERO — full-bleed photo, keyword H1, clear actions -->
+<header class="hero-x" id="main">
+  <picture class="hero-x-media">
+    <source media="(max-width: 768px)" type="image/webp" srcset="../images/home/mixed-use-building-addis-ababa-800.webp" />
+    <source media="(max-width: 768px)" srcset="../images/home/mixed-use-building-addis-ababa-800.jpg" />
+    <source type="image/webp" srcset="../images/home/luxury-villa-addis-ababa-800.webp 800w, ../images/home/luxury-villa-addis-ababa-lg.webp 1600w" sizes="100vw" />
+    <img src="../images/home/luxury-villa-addis-ababa-lg.jpg" srcset="../images/home/luxury-villa-addis-ababa-800.jpg 800w, ../images/home/luxury-villa-addis-ababa-lg.jpg 1600w" sizes="100vw" width="1600" height="900" alt="በ2:20 ፓርትነርስ የተነደፈና የተገነባ ዘመናዊ የድንጋይና የእንጨት ቪላ፣ አዲስ አበባ" fetchpriority="high" decoding="async" />
+  </picture>
+  <div class="container hero-x-inner">
+    <h1 class="hero-x-kicker">በአዲስ አበባ አርክቴክቶችና ገንቢዎች</h1>
+    <p class="hero-x-title">
+      <span class="word-anim" style="animation-delay:.05s">ራዕይ</span>
           <span class="word-anim it underline-it" style="animation-delay:.20s">የአዲስ አበባን</span><br/>
           <span class="word-anim" style="animation-delay:.35s">ገጽታ</span>
           <span class="word-anim it" style="animation-delay:.50s">የሚቀርጽበት።</span>
-        </h1>
-        <p>
-          በአንድ አርክቴክትና በአንድ ኮንትራክተር የተመሠረተ የዲዛይንና ግንባታ ድርጅት። ለአሥራ አራት ዓመታት የዘመናዊቷን ኢትዮጵያ ገጽታ የሚገልጹ መኖሪያ ቤቶችን፣ ሕንፃዎችንና የውስጥ ዲዛይኖችን ነድፈናል፤ ገንብተናል።
-        </p>
-        <div class="home-hero-cta">
-          <a href="../projects/" class="btn btn-dark">ሥራዎቻችንን ይመልከቱ</a>
-          <a href="../contact/" class="btn btn-outline">ፕሮጀክት ይጀምሩ</a>
-        </div>
-      </div>
-
-      <div class="home-hero-visual">
-        <span class="corner-frame tl"></span>
-        <span class="corner-frame br"></span>
-        <img width="1024" height="576" src="../images/hero.jpg" alt="በ2:20 ፓርትነርስ የተነደፈና የተገነባ ቅንጡ ባለብዙ አገልግሎት ሕንፃ፣ አዲስ አበባ" loading="eager" decoding="async" fetchpriority="high" data-fallback="true" />
-        <div class="visual-tag">
-          <div>
-            <small>ተለይቶ የቀረበ ፕሮጀክት</small>
-            <strong>ቅንጡ ባለብዙ አገልግሎት ሕንፃ፣ ቦሌ</strong>
-          </div>
-          <span class="badge">በግንባታ ላይ</span>
-        </div>
-      </div>
+    </p>
+    <p class="hero-x-lede">በአንድ አርክቴክትና በአንድ ኮንትራክተር የተመሠረተ የዲዛይንና ግንባታ ድርጅት። ለአሥራ አራት ዓመታት የዘመናዊቷን ኢትዮጵያ ገጽታ የሚገልጹ መኖሪያ ቤቶችን፣ ሕንፃዎችንና የውስጥ ዲዛይኖችን ነድፈናል፤ ገንብተናል።</p>
+    <div class="hero-x-cta">
+      <a href="../contact/" class="btn btn-gold">ነፃ ምክክር ይያዙ</a>
+      <a href="../projects/" class="btn btn-light-outline">ሥራዎቻችንን ይመልከቱ</a>
     </div>
+    <ul class="hero-x-trust">
+      <li>ዲዛይን፣ ግንባታና የእንጨት ሥራ በአንድ ጣሪያ ሥር</li>
+      <li>የዕለት ተዕለት የሳይት ቁጥጥር</li>
+      <li>ነፃ የመጀመሪያ ምክክርና የሳይት ጉብኝት</li>
+    </ul>
   </div>
 </header>
 
@@ -453,41 +452,66 @@
     </div>
     <div class="services-grid">
       <div class="svc reveal">
-        <img class="svc-img" src="../images/services/architecture.jpg" width="504" height="316" alt="አርክቴክት በፕላኖች ላይ የሕንፃ ንድፍ ሲሥል" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="../images/home/architect-sketching-design-studio-800.webp 800w, ../images/home/architect-sketching-design-studio-lg.webp 1448w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/architect-sketching-design-studio-800.jpg" srcset="../images/home/architect-sketching-design-studio-800.jpg 800w, ../images/home/architect-sketching-design-studio-lg.jpg 1448w" sizes="(max-width: 768px) 100vw, 33vw" width="1448" height="1086" alt="አርክቴክት በ2:20 ፓርትነርስ ስቱዲዮ የቪላ ንድፍ ሲሥል" loading="lazy" decoding="async" /></picture>
         <div class="num">01 / ሥነ ሕንፃ</div>
         <h3><span class="it">ብጁ</span> ዲዛይን — ከንድፍ እስከ ፈቃድ።</h3>
         <p>ለቦታዎ፣ ለአየር ንብረቱና ለፍላጎትዎ የተስማሙ የፅንሰ-ሐሳብ፣ የመጀመሪያ ደረጃና የግንባታ ሰነዶች — ከአዲስ አበባ የግንባታ ፈቃድ ሂደት ጋር ሙሉ ክትትል።</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="../images/services/residential.jpg" width="504" height="316" alt="የቪላ ግቢ ከወይራ ዛፍና ክፍት የመስታወት በሮች ጋር" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="../images/home/luxury-villa-addis-ababa-800.webp 800w, ../images/home/luxury-villa-addis-ababa-lg.webp 1600w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/luxury-villa-addis-ababa-800.jpg" srcset="../images/home/luxury-villa-addis-ababa-800.jpg 800w, ../images/home/luxury-villa-addis-ababa-lg.jpg 1600w" sizes="(max-width: 768px) 100vw, 33vw" width="1600" height="900" alt="ዘመናዊ የድንጋይና የእንጨት ቪላ በምሽት፣ አዲስ አበባ" loading="lazy" decoding="async" /></picture>
         <div class="num">02 / መኖሪያ</div>
         <h3>ብጁ <span class="it">መኖሪያ ቤቶች</span> እና ቅንጡ ቪላዎች።</h3>
         <p>የቤተሰብ ግቢዎች፣ የግል ቪላዎችና ከፍተኛ ደረጃ መኖሪያዎች በቦሌ፣ ሳርቤት፣ ሲኤምሲ፣ ኦልድ ኤርፖርትና አያት። ድንጋይ፣ መስታወትና እንጨት — በተፈለገው ጥራት።</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="../images/services/commercial.jpg" width="504" height="316" alt="የድንጋይና የመስታወት የንግድ ሕንፃ በምሽት" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="../images/home/mixed-use-building-addis-ababa-800.webp 800w, ../images/home/mixed-use-building-addis-ababa-lg.webp 1122w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/mixed-use-building-addis-ababa-800.jpg" srcset="../images/home/mixed-use-building-addis-ababa-800.jpg 800w, ../images/home/mixed-use-building-addis-ababa-lg.jpg 1122w" sizes="(max-width: 768px) 100vw, 33vw" width="1122" height="1402" alt="በአዲስ አበባ መንገድ ላይ ያለ የድንጋይና የመስታወት ባለብዙ አገልግሎት ሕንፃ" loading="lazy" decoding="async" /></picture>
         <div class="num">03 / ንግድ</div>
         <h3>ባለብዙ አገልግሎት ሕንፃዎች፣ <span class="it">ቢሮዎች</span>፣ መደብሮች።</h3>
         <p>መካከለኛ ከፍታ ያላቸው የንግድ ሕንፃዎች፣ የቢሮ ዝግጅት፣ የካፌና የማሳያ ክፍል ዲዛይን — ከመሠረቱ ጀምሮ ወይም ሙሉ እድሳት።</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="../images/services/interiors.jpg" width="504" height="316" alt="ብርሃን የሞላበት ሳሎን ከእንጨት መደርደሪያ ጋር" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="../images/home/walnut-kitchen-custom-joinery-800.webp 800w, ../images/home/walnut-kitchen-custom-joinery-lg.webp 1448w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/walnut-kitchen-custom-joinery-800.jpg" srcset="../images/home/walnut-kitchen-custom-joinery-800.jpg 800w, ../images/home/walnut-kitchen-custom-joinery-lg.jpg 1448w" sizes="(max-width: 768px) 100vw, 33vw" width="1448" height="1086" alt="የዋልነት እንጨት ኩሽና ከድንጋይ ደሴትና ከነሐስ መብራቶች ጋር" loading="lazy" decoding="async" /></picture>
         <div class="num">04 / የውስጥ ዲዛይን</div>
         <h3><span class="it">የውስጥ</span> ዲዛይንና ማጠናቀቂያ።</h3>
         <p>የቁሳቁስ ምርጫ፣ መብራት፣ ብጁ የእንጨት ሥራ፣ የቤት ዕቃዎችና መገልገያዎች። ሞቅ ያለ፣ ዘላቂና በተቻለ መጠን ከሀገር ውስጥ የተገኘ።</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="../images/services/supervision.jpg" width="504" height="316" alt="የ2:20 ፓርትነርስ መሐንዲሶች በሳይቱ ላይ ስዕሎችን ሲገመግሙ" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="../images/home/construction-site-supervision-addis-ababa-800.webp 800w, ../images/home/construction-site-supervision-addis-ababa-lg.webp 1024w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/construction-site-supervision-addis-ababa-800.jpg" srcset="../images/home/construction-site-supervision-addis-ababa-800.jpg 800w, ../images/home/construction-site-supervision-addis-ababa-lg.jpg 1024w" sizes="(max-width: 768px) 100vw, 33vw" width="1024" height="682" alt="የ2:20 ፓርትነርስ መሥራቾች በግንባታ ሳይት ላይ ስዕሎችን ሲገመግሙ" loading="lazy" decoding="async" /></picture>
         <div class="num">05 / ግንባታና አስተዳደር</div>
         <h3>የግንባታ <span class="it">ቁጥጥር</span>።</h3>
         <p>የፕሮጀክት አስተዳደር፣ የዕለት ተዕለት የሳይት ቁጥጥር፣ የአቅራቢዎች ቅንጅትና እስከ ርክክብ ድረስ የጥራት ቁጥጥር።</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="../images/services/joinery.jpg" width="504" height="316" alt="በ2:20 ውድወርክስ ወርክሾፕ እንጨት በእጅ ሲለሰልስ" loading="lazy" decoding="async" />
+        <picture class="svc-img"><img src="../images/woodworks-detail.jpg" width="819" height="1024" alt="በ2:20 ውድወርክስ የተሠራ ብጁ ቁም ሣጥን" loading="lazy" decoding="async" /></picture>
         <div class="num">06 / የእንጨት ሥራ</div>
         <h3>2:20 <span class="it">ውድወርክስ</span> — ብጁ የእንጨት ሥራ።</h3>
         <p>የራሳችን ወርክሾፕ ኩሽናዎችን፣ የመታጠቢያ ቤት ካቢኔቶችን፣ በሮችን፣ ቁም ሣጥኖችንና ልዩ የቤት ዕቃዎችን በዋንዛ፣ በጥድ፣ በዝግባና በጥቁር እንጨት ይሠራል።</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ON SITE — construction credibility -->
+<section class="onsite">
+  <div class="container onsite-grid">
+    <div class="onsite-media reveal">
+      <picture class="onsite-main"><source type="image/webp" srcset="../images/home/construction-site-supervision-addis-ababa-800.webp 800w, ../images/home/construction-site-supervision-addis-ababa-lg.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" /><img src="../images/home/construction-site-supervision-addis-ababa-800.jpg" srcset="../images/home/construction-site-supervision-addis-ababa-800.jpg 800w, ../images/home/construction-site-supervision-addis-ababa-lg.jpg 1024w" sizes="(max-width: 1024px) 100vw, 50vw" width="1024" height="682" alt="ሳምሶን ጌታቸውና ቢንያም ጥላሁን በአዲስ አበባ በ2:20 ፓርትነርስ የግንባታ ሳይት ላይ ስዕሎችን ሲገመግሙ" loading="lazy" decoding="async" /></picture>
+      <figure class="onsite-inset">
+        <picture class="onsite-inset-img"><source type="image/webp" srcset="../images/home/house-under-construction-addis-ababa-800.webp 800w, ../images/home/house-under-construction-addis-ababa-lg.webp 1024w" sizes="240px" /><img src="../images/home/house-under-construction-addis-ababa-800.jpg" srcset="../images/home/house-under-construction-addis-ababa-800.jpg 800w, ../images/home/house-under-construction-addis-ababa-lg.jpg 1024w" sizes="240px" width="1024" height="768" alt="በግንባታ ላይ ያለ የኮተቤ መኖሪያ ቤት፣ አዲስ አበባ" loading="lazy" decoding="async" /></picture>
+        <figcaption>የኮተቤ መኖሪያ — በግንባታ ላይ</figcaption>
+      </figure>
+    </div>
+    <div class="onsite-text reveal">
+      <div class="eyebrow">በየዕለቱ በሳይቱ ላይ</div>
+      <h2 class="sec-title">የራሳችን ሠራተኞች። <span class="it">መሥራች አጋር</span> በሳይቱ ላይ።</h2>
+      <p>በግንባታ ላይ አብዛኞቹ ችግሮች የሚጀምሩት ዲዛይነሩና ኮንትራክተሩ መነጋገር ሲያቆሙ ነው። በ2:20 ፓርትነርስ ሁለቱም አንድ ቡድን ናቸው — ከመሥራቾቹ አንዱም በእያንዳንዱ የሥራ ቀን በሳይቱ ላይ ይገኛል።</p>
+      <ul class="checks">
+        <li>በመሥራች አጋር የሚመራ የዕለት ተዕለት የሳይት ቁጥጥር</li>
+        <li>ሥነ ሕንፃ፣ ስትራክቸርና ኤሌክትሮ-መካኒካል በአንድ ቡድን ቅንጅት</li>
+        <li>የአዲስ አበባ የግንባታ ፈቃድ ሂደትን እኛ እንከታተላለን</li>
+        <li>በርክክብ ጊዜ የቀሩ ሥራዎች ማስተካከያ፣ የዋስትና ጊዜና የተሠራውን የሚያሳዩ ስዕሎች</li>
+      </ul>
+      <a href="../services/" class="link-arrow">ግንባታን እንዴት እንመራለን</a>
     </div>
   </div>
 </section>
@@ -582,6 +606,26 @@
   </div>
 </section>
 
+<!-- AT A GLANCE — short, quotable facts for people and AI search -->
+<section class="facts">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-left">
+        <div class="eyebrow">በአጭሩ</div>
+        <h2 class="sec-title">2:20 ፓርትነርስ <span class="it">በአጭሩ</span>።</h2>
+      </div>
+    </div>
+    <dl class="facts-grid">
+      <div><dt>ምን እንሠራለን</dt><dd>ሥነ ሕንፃ፣ ግንባታ፣ የውስጥ ማጠናቀቂያ፣ የሳይት ቁጥጥርና ብጁ የእንጨት ሥራ — በአንድ የዲዛይንና ግንባታ ቡድን።</dd></div>
+      <div><dt>የት</dt><dd>ቢሯችን መገናኛ፣ አዲስ አበባ። ፕሮጀክቶች በቦሌ፣ ሳርቤት፣ ሲኤምሲ፣ አያት፣ ኦልድ ኤርፖርትና ካዛንቺስ።</dd></div>
+      <div><dt>ከመቼ ጀምሮ</dt><dd>ከ2012 እ.ኤ.አ. — በአርክቴክት ሳምሶን ጌታቸውና በኮንትራክተር ቢንያም ጥላሁን የተመሠረተ።</dd></div>
+      <div><dt>የተለመደ የጊዜ ሰሌዳ</dt><dd>ብጁ መኖሪያ ቤቶች 12–18 ወራት · መካከለኛ ከፍታ የንግድ ሕንፃዎች 18–30 ወራት · የውስጥ ማጠናቀቂያ 8–14 ሳምንታት።</dd></div>
+      <div><dt>የመጀመሪያ እርምጃ</dt><dd>ነፃ ምክክርና የሳይት ጉብኝት፣ ከዚያም የጽሑፍ የአዋጭነት በጀት።</dd></div>
+      <div><dt>ያግኙን</dt><dd><a href="tel:+251937174816">+251 93 717 4816</a> · <a href="mailto:220partnersplc@gmail.com">220partnersplc@gmail.com</a> · ሰኞ–ዓርብ፣ ከጠዋቱ 3:00 እስከ ምሽቱ 12:00</dd></div>
+    </dl>
+  </div>
+</section>
+
 <!-- REVIEWS -->
 <section class="testimonials">
   <div class="container">
@@ -624,7 +668,7 @@
     <div class="partners-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
       <div class="partner reveal">
         <div class="head">
-          <img class="partner-avatar" src="../images/team/samson.jpg" width="246" height="246" alt="ሳምሶን ጌታቸው፣ ዋና አርክቴክት" loading="lazy" />
+          <div class="partner-avatar">SG</div>
           <div>
             <h3>ሳምሶን <span class="it">ጌታቸው</span></h3>
             <small>ዋና አርክቴክትና ተባባሪ መሥራች</small>
@@ -634,7 +678,7 @@
       </div>
       <div class="partner reveal">
         <div class="head">
-          <img class="partner-avatar" src="../images/team/beniam.jpg" width="246" height="246" alt="ቢንያም ጥላሁን፣ ዋና ኮንትራክተር" loading="lazy" />
+          <div class="partner-avatar">BT</div>
           <div>
             <h3>ቢንያም <span class="it">ጥላሁን</span></h3>
             <small>ዋና ኮንትራክተርና ተባባሪ መሥራች</small>
