@@ -11,6 +11,9 @@
   --cream-alt:   #ece6da;
   --cream-deep:  #e3dccc;
   --ink:         #1c1a16;
+  --navy:        #12394a;   /* deep blue — pairs with the gold, from the brand photo set */
+  --navy-deep:   #0b2633;
+  --navy-soft:   #e6eef1;   /* light blue tint for chips/backgrounds */
   --ink-mid:     #6b6557;
   --ink-light:   #9a9080;
   --line:        rgba(28,26,22,0.10);
@@ -439,7 +442,7 @@ svg.logo-mark { overflow: visible; }
 
 /* STATS STRIP */
 .stats-strip {
-  background: var(--ink);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
   padding: 64px 0;
   border-top: 3px solid var(--gold);
   border-bottom: 3px solid var(--gold);
@@ -504,7 +507,7 @@ svg.logo-mark { overflow: visible; }
   position: relative;
 }
 .wf-step:hover .num-circle {
-  background: var(--gold); color: #fff; transform: scale(1.08);
+  background: var(--navy); color: var(--gold); border-color: var(--gold); transform: scale(1.08);
   box-shadow: 0 12px 32px rgba(200,169,110,0.35);
 }
 .wf-step h4 {
@@ -575,7 +578,7 @@ svg.logo-mark { overflow: visible; }
 
 /* FEATURED QUOTE BAND */
 .quote-band {
-  background: var(--ink); color: var(--cream);
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); color: var(--cream);
   padding: 96px 0;
   position: relative;
   overflow: hidden;
@@ -600,6 +603,31 @@ svg.logo-mark { overflow: visible; }
   font-style: normal; font-size: 12px;
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--gold);
+}
+
+
+/* CTA BAND — shared, deep blue with gold rule */
+.cta-band {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--cream);
+  padding: 96px 0; position: relative; overflow: hidden;
+}
+.cta-band::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.cta-band h2 { color: #fff; }
+.cta-band h2 .it { color: var(--gold); }
+.cta-band p { color: rgba(255,255,255,0.78); }
+.cta-band .btn-outline { color: #fff; border-color: rgba(255,255,255,0.6); }
+.cta-band .btn-outline:hover { background: #fff; color: var(--navy); }
+
+/* Label chip — the angled blue tag used on the brand photo sheet */
+.tag-chip {
+  display: inline-block; background: var(--navy); color: #fff;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 22px 6px 14px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
 }
 
 /* FOOTER */
