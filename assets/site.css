@@ -873,6 +873,12 @@ footer {
   .fab-call .fab-label small { font-size: 9px; letter-spacing: 0.12em; margin-bottom: 2px; }
   .fab-call .fab-label strong { font-size: 15px; }
   .nav-call-mobile { display: none; } /* the floating call button covers this on phones */
+  .stats-strip .container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 12px; }
+  .stat { padding: 0 6px; }
+  .stat .num { font-size: 46px; }
+  .stat .lab { font-size: 11px; letter-spacing: 0.08em; }
+  .home-hero-visual .visual-tag { flex-wrap: wrap; left: 16px; right: 16px; bottom: 16px; gap: 8px; }
+  .home-hero-visual .visual-tag strong { font-size: 18px; }
 }
 
 /* ============================================
