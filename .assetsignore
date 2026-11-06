@@ -1,0 +1,6 @@
+# Files in the repo that should NOT be served on the public site
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+*.md
