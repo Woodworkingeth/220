@@ -840,6 +840,7 @@ footer {
   .wf-step .num-circle { width: 60px; height: 60px; font-size: 26px; }
   .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
   .card { padding: 28px 24px; }
+  .svc .svc-img { width: calc(100% + 48px); margin: -28px -24px 22px; }
   .card h3 { font-size: 24px; }
   .nav-links { display: none !important; flex-direction: column; gap: 0;
                position: absolute; top: calc(100% + 8px); left: 16px; right: 16px; width: auto;
@@ -880,6 +881,55 @@ footer {
   .home-hero-visual .visual-tag { flex-wrap: wrap; left: 16px; right: 16px; bottom: 16px; gap: 8px; }
   .home-hero-visual .visual-tag strong { font-size: 18px; }
 }
+
+/* ============================================
+   IMAGE-LED CARDS (v6)
+   ============================================ */
+/* Home service cards: photo bleeds to the card edges */
+.svc { display: flex; flex-direction: column; }
+.svc .svc-img {
+  width: calc(100% + 64px); max-width: none;
+  margin: -36px -32px 26px;
+  aspect-ratio: 16 / 10; object-fit: cover;
+  transition: transform .6s ease;
+}
+.svc:hover .svc-img { transform: scale(1.04); }
+
+/* Woodworks category cards */
+.cat { overflow: hidden; }
+.cat .cat-img {
+  width: calc(100% + 64px); max-width: none;
+  margin: -40px -32px 24px;
+  aspect-ratio: 16 / 10; object-fit: cover;
+  transition: transform .6s ease;
+}
+.cat:hover .cat-img { transform: scale(1.04); }
+
+/* Wood swatches on the dark materials band */
+.mat .mat-swatch {
+  width: 72px; height: 72px; border-radius: 50%;
+  object-fit: cover; margin-bottom: 18px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* Partner portraits */
+img.partner-avatar {
+  width: 76px; height: 76px; border-radius: 50%;
+  object-fit: cover; object-position: center 20%;
+  border: 2px solid var(--gold);
+  background: var(--navy);
+}
+
+/* Section labels as blue angled chips (matches the brand photo sheet) */
+.sec-head .eyebrow {
+  background: var(--navy); color: #fff;
+  padding: 7px 26px 7px 14px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  letter-spacing: 0.14em; font-weight: 600;
+}
+.sec-head .eyebrow::before { background: var(--gold); width: 18px; }
+:lang(am) .sec-head .eyebrow { letter-spacing: 0.02em; }
 
 /* ============================================
    LANGUAGE SWITCH  (EN | አማ)
