@@ -36,7 +36,9 @@
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "GeneralContractor", "ArchitecturalService"],
   "name": "2:20 Partners Design & Construction PLC",
-  "image": "https://220partnersplc.com/images/hero.jpg",
+  "image": ["https://220partnersplc.com/images/home/luxury-villa-addis-ababa-lg.jpg", "https://220partnersplc.com/images/home/mixed-use-building-addis-ababa-lg.jpg", "https://220partnersplc.com/images/home/construction-site-supervision-addis-ababa-lg.jpg"],
+  "knowsLanguage": ["en", "am"],
+  "foundingDate": "2012",
   "logo": "https://220partnersplc.com/images/logo-mark.png",
   "url": "https://220partnersplc.com",
   "telephone": "+251937174816",
@@ -75,6 +77,10 @@
 }
 </script>
 
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "2:20 Partners Design & Construction PLC", "url": "https://220partnersplc.com/", "inLanguage": ["en", "am"]}
+</script>
+
 <!-- JSON-LD: FAQ schema -->
 <script type="application/ld+json">
 {
@@ -103,11 +109,12 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="image" href="./images/hero.jpg" fetchpriority="high" />
+<link rel="preload" as="image" type="image/webp" media="(min-width: 769px)" href="./images/home/luxury-villa-addis-ababa-lg.webp" imagesrcset="./images/home/luxury-villa-addis-ababa-800.webp 800w, ./images/home/luxury-villa-addis-ababa-lg.webp 1600w" imagesizes="100vw" fetchpriority="high" />
+<link rel="preload" as="image" type="image/webp" media="(max-width: 768px)" href="./images/home/mixed-use-building-addis-ababa-800.webp" fetchpriority="high" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" />
 
 <!-- Shared stylesheet -->
-<link rel="stylesheet" href="./assets/site.css?v=7" />
+<link rel="stylesheet" href="./assets/site.css?v=8" />
 
 <style>
   /* Page-specific tweaks */
@@ -326,44 +333,34 @@
   </div>
 </nav>
 
-<!-- HOME HERO -->
-<header class="home-hero" id="main">
-  <div class="container">
-    <div class="home-hero-grid">
-      <div class="home-hero-text">
-        <div class="eyebrow">Architecture · Construction · Joinery — Addis Ababa</div>
-        <h1>
-          <span class="word-anim" style="animation-delay:.05s">Where</span>
-          <span class="word-anim it underline-it" style="animation-delay:.18s">vision</span>
-          <span class="word-anim" style="animation-delay:.30s">becomes</span><br/>
-          <span class="word-anim" style="animation-delay:.42s">the</span>
-          <span class="word-anim it" style="animation-delay:.55s">skyline</span>
-          <span class="word-anim" style="animation-delay:.68s">of Addis.</span>
-        </h1>
-        <p>
-          A design-build firm founded by an architect and a contractor.
-          Fourteen years designing and constructing the homes, towers,
-          and interiors that define modern Ethiopia.
-        </p>
-        <div class="home-hero-cta">
-          <a href="projects/" class="btn btn-dark">View Our Work</a>
-          <a href="contact/" class="btn btn-outline">Start a Project</a>
-        </div>
-      </div>
-
-      <div class="home-hero-visual">
-        <span class="corner-frame tl"></span>
-        <span class="corner-frame br"></span>
-        <img width="1024" height="576" src="./images/hero.jpg" alt="Luxury mixed-use building design and construction by 2:20 Partners, Addis Ababa, Ethiopia" loading="eager" decoding="async" fetchpriority="high" data-fallback="true" />
-        <div class="visual-tag">
-          <div>
-            <small>Featured Project</small>
-            <strong>Luxury Mixed-Use, Bole</strong>
-          </div>
-          <span class="badge">In Build</span>
-        </div>
-      </div>
+<!-- HERO — full-bleed photo, keyword H1, clear actions -->
+<header class="hero-x" id="main">
+  <picture class="hero-x-media">
+    <source media="(max-width: 768px)" type="image/webp" srcset="./images/home/mixed-use-building-addis-ababa-800.webp" />
+    <source media="(max-width: 768px)" srcset="./images/home/mixed-use-building-addis-ababa-800.jpg" />
+    <source type="image/webp" srcset="./images/home/luxury-villa-addis-ababa-800.webp 800w, ./images/home/luxury-villa-addis-ababa-lg.webp 1600w" sizes="100vw" />
+    <img src="./images/home/luxury-villa-addis-ababa-lg.jpg" srcset="./images/home/luxury-villa-addis-ababa-800.jpg 800w, ./images/home/luxury-villa-addis-ababa-lg.jpg 1600w" sizes="100vw" width="1600" height="900" alt="Modern stone and timber villa at dusk in Addis Ababa, designed and built by 2:20 Partners" fetchpriority="high" decoding="async" />
+  </picture>
+  <div class="container hero-x-inner">
+    <h1 class="hero-x-kicker">Architects &amp; Builders in Addis Ababa</h1>
+    <p class="hero-x-title">
+      <span class="word-anim" style="animation-delay:.05s">Where</span>
+      <span class="word-anim it underline-it" style="animation-delay:.18s">vision</span>
+      <span class="word-anim" style="animation-delay:.30s">becomes</span><br/>
+      <span class="word-anim" style="animation-delay:.42s">the</span>
+      <span class="word-anim it" style="animation-delay:.55s">skyline</span>
+      <span class="word-anim" style="animation-delay:.68s">of Addis.</span>
+    </p>
+    <p class="hero-x-lede">A design-build firm founded by an architect and a contractor. Fourteen years designing and constructing the homes, towers, and interiors that define modern Ethiopia.</p>
+    <div class="hero-x-cta">
+      <a href="contact/" class="btn btn-gold">Book a Free Consultation</a>
+      <a href="projects/" class="btn btn-light-outline">View Our Work</a>
     </div>
+    <ul class="hero-x-trust">
+      <li>Design, build &amp; joinery under one roof</li>
+      <li>Daily site supervision</li>
+      <li>Free first consultation &amp; site visit</li>
+    </ul>
   </div>
 </header>
 
@@ -428,41 +425,66 @@
     </div>
     <div class="services-grid">
       <div class="svc reveal">
-        <img class="svc-img" src="./images/services/architecture.jpg" width="504" height="316" alt="Architect sketching a building elevation over floor plans" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="./images/home/architect-sketching-design-studio-800.webp 800w, ./images/home/architect-sketching-design-studio-lg.webp 1448w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="./images/home/architect-sketching-design-studio-800.jpg" srcset="./images/home/architect-sketching-design-studio-800.jpg 800w, ./images/home/architect-sketching-design-studio-lg.jpg 1448w" sizes="(max-width: 768px) 100vw, 33vw" width="1448" height="1086" alt="Architect sketching a villa elevation over floor plans in the 2:20 Partners studio" loading="lazy" decoding="async" /></picture>
         <div class="num">01 / Architecture</div>
         <h3><span class="it">Bespoke</span> design from sketch to permit.</h3>
         <p>Concept, schematic, and construction documents tuned to your site, climate, and brief — with full Addis municipality permit coordination.</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="./images/services/residential.jpg" width="504" height="316" alt="Villa courtyard with olive tree and open glass doors" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="./images/home/luxury-villa-addis-ababa-800.webp 800w, ./images/home/luxury-villa-addis-ababa-lg.webp 1600w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="./images/home/luxury-villa-addis-ababa-800.jpg" srcset="./images/home/luxury-villa-addis-ababa-800.jpg 800w, ./images/home/luxury-villa-addis-ababa-lg.jpg 1600w" sizes="(max-width: 768px) 100vw, 33vw" width="1600" height="900" alt="Modern stone and timber villa at dusk, Addis Ababa" loading="lazy" decoding="async" /></picture>
         <div class="num">02 / Residential</div>
         <h3>Custom <span class="it">homes</span> and luxury villas.</h3>
         <p>Family compounds, private villas, and high-end residences across Bole, Sarbet, CMC, Old Airport, and Ayat. Stone, glass, wood — finished to spec.</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="./images/services/commercial.jpg" width="504" height="316" alt="Stone and glass commercial building at dusk" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="./images/home/mixed-use-building-addis-ababa-800.webp 800w, ./images/home/mixed-use-building-addis-ababa-lg.webp 1122w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="./images/home/mixed-use-building-addis-ababa-800.jpg" srcset="./images/home/mixed-use-building-addis-ababa-800.jpg 800w, ./images/home/mixed-use-building-addis-ababa-lg.jpg 1122w" sizes="(max-width: 768px) 100vw, 33vw" width="1122" height="1402" alt="Stone and glass mixed-use building on an Addis Ababa street" loading="lazy" decoding="async" /></picture>
         <div class="num">03 / Commercial</div>
         <h3>Mixed-use, <span class="it">offices</span>, retail.</h3>
         <p>Mid-rise commercial buildings, office fit-outs, café and showroom design — ground-up or full remodel.</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="./images/services/interiors.jpg" width="504" height="316" alt="Light-filled living room with warm wood shelving" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="./images/home/walnut-kitchen-custom-joinery-800.webp 800w, ./images/home/walnut-kitchen-custom-joinery-lg.webp 1448w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="./images/home/walnut-kitchen-custom-joinery-800.jpg" srcset="./images/home/walnut-kitchen-custom-joinery-800.jpg 800w, ./images/home/walnut-kitchen-custom-joinery-lg.jpg 1448w" sizes="(max-width: 768px) 100vw, 33vw" width="1448" height="1086" alt="Walnut kitchen with stone island and brass pendants" loading="lazy" decoding="async" /></picture>
         <div class="num">04 / Interiors</div>
         <h3><span class="it">Interior</span> design and finishing.</h3>
         <p>Material palettes, lighting, custom millwork, FF&amp;E. Warm, durable, locally-sourced where it counts.</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="./images/services/supervision.jpg" width="504" height="316" alt="2:20 Partners site engineers reviewing drawings on site" loading="lazy" decoding="async" />
+        <picture class="svc-img"><source type="image/webp" srcset="./images/home/construction-site-supervision-addis-ababa-800.webp 800w, ./images/home/construction-site-supervision-addis-ababa-lg.webp 1024w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="./images/home/construction-site-supervision-addis-ababa-800.jpg" srcset="./images/home/construction-site-supervision-addis-ababa-800.jpg 800w, ./images/home/construction-site-supervision-addis-ababa-lg.jpg 1024w" sizes="(max-width: 768px) 100vw, 33vw" width="1024" height="682" alt="2:20 Partners founders reviewing drawings on a construction site" loading="lazy" decoding="async" /></picture>
         <div class="num">05 / Build &amp; Manage</div>
         <h3>Construction <span class="it">supervision</span>.</h3>
         <p>Project management, daily site supervision, vendor coordination, and quality control through handover.</p>
       </div>
       <div class="svc reveal">
-        <img class="svc-img" src="./images/services/joinery.jpg" width="504" height="316" alt="Hand-planing hardwood in the 2:20 Woodworks shop" loading="lazy" decoding="async" />
+        <picture class="svc-img"><img src="./images/woodworks-detail.jpg" width="819" height="1024" alt="Custom wardrobe and millwork by 2:20 Woodworks" loading="lazy" decoding="async" /></picture>
         <div class="num">06 / Joinery</div>
         <h3>2:20 <span class="it">Woodworks</span> — custom millwork.</h3>
         <p>Our in-house shop crafts kitchens, vanities, doors, closets and statement furniture in Wanza, Tid, Zigba, and Tikur Inchet.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ON SITE — construction credibility -->
+<section class="onsite">
+  <div class="container onsite-grid">
+    <div class="onsite-media reveal">
+      <picture class="onsite-main"><source type="image/webp" srcset="./images/home/construction-site-supervision-addis-ababa-800.webp 800w, ./images/home/construction-site-supervision-addis-ababa-lg.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" /><img src="./images/home/construction-site-supervision-addis-ababa-800.jpg" srcset="./images/home/construction-site-supervision-addis-ababa-800.jpg 800w, ./images/home/construction-site-supervision-addis-ababa-lg.jpg 1024w" sizes="(max-width: 1024px) 100vw, 50vw" width="1024" height="682" alt="Samson Getachew and Beniam Tilahun reviewing drawings on a 2:20 Partners construction site in Addis Ababa" loading="lazy" decoding="async" /></picture>
+      <figure class="onsite-inset">
+        <picture class="onsite-inset-img"><source type="image/webp" srcset="./images/home/house-under-construction-addis-ababa-800.webp 800w, ./images/home/house-under-construction-addis-ababa-lg.webp 1024w" sizes="240px" /><img src="./images/home/house-under-construction-addis-ababa-800.jpg" srcset="./images/home/house-under-construction-addis-ababa-800.jpg 800w, ./images/home/house-under-construction-addis-ababa-lg.jpg 1024w" sizes="240px" width="1024" height="768" alt="Kotebe residence under construction with scaffolding, Addis Ababa" loading="lazy" decoding="async" /></picture>
+        <figcaption>Kotebe residence — on site</figcaption>
+      </figure>
+    </div>
+    <div class="onsite-text reveal">
+      <div class="eyebrow">On Site, Every Day</div>
+      <h2 class="sec-title">Our own crews. <span class="it">A partner</span> on site.</h2>
+      <p>Most problems on a build start when the designer and the contractor stop talking. At 2:20 Partners they are the same team — and one of the founders is on site every working day.</p>
+      <ul class="checks">
+        <li>Daily site supervision, led by a founding partner</li>
+        <li>Architecture, structure and MEP coordinated by one team</li>
+        <li>Addis Ababa building permits handled for you</li>
+        <li>Snag list, defect-liability period and as-built drawings at handover</li>
+      </ul>
+      <a href="services/" class="link-arrow">How we manage construction</a>
     </div>
   </div>
 </section>
@@ -557,6 +579,26 @@
   </div>
 </section>
 
+<!-- AT A GLANCE — short, quotable facts for people and AI search -->
+<section class="facts">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-left">
+        <div class="eyebrow">At a Glance</div>
+        <h2 class="sec-title">2:20 Partners in <span class="it">brief</span>.</h2>
+      </div>
+    </div>
+    <dl class="facts-grid">
+      <div><dt>What we do</dt><dd>Architecture, construction, interior fit-out, site supervision and custom joinery — one design-build team.</dd></div>
+      <div><dt>Where</dt><dd>Office in Megenagna, Addis Ababa. Projects across Bole, Sarbet, CMC, Ayat, Old Airport and Kazanchis.</dd></div>
+      <div><dt>Since</dt><dd>2012 — founded by architect Samson Getachew and contractor Beniam Tilahun.</dd></div>
+      <div><dt>Typical timelines</dt><dd>Custom homes 12–18 months · Mid-rise commercial 18–30 months · Interior fit-outs 8–14 weeks.</dd></div>
+      <div><dt>First step</dt><dd>A free consultation and site visit, then a written feasibility budget.</dd></div>
+      <div><dt>Contact</dt><dd><a href="tel:+251937174816">+251 93 717 4816</a> · <a href="mailto:220partnersplc@gmail.com">220partnersplc@gmail.com</a> · Mon–Fri, 9:00–18:00</dd></div>
+    </dl>
+  </div>
+</section>
+
 <!-- REVIEWS (real reviews live on Google) -->
 <section class="testimonials">
   <div class="container">
@@ -600,7 +642,7 @@
     <div class="partners-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
       <div class="partner reveal">
         <div class="head">
-          <img class="partner-avatar" src="./images/team/samson.jpg" width="246" height="246" alt="Samson Getachew, Principal Architect" loading="lazy" />
+          <div class="partner-avatar">SG</div>
           <div>
             <h3>Samson <span class="it">Getachew</span></h3>
             <small>Principal Architect &amp; Co-Founder</small>
@@ -610,7 +652,7 @@
       </div>
       <div class="partner reveal">
         <div class="head">
-          <img class="partner-avatar" src="./images/team/beniam.jpg" width="246" height="246" alt="Beniam Tilahun, Principal Contractor" loading="lazy" />
+          <div class="partner-avatar">BT</div>
           <div>
             <h3>Beniam <span class="it">Tilahun</span></h3>
             <small>Principal Contractor &amp; Co-Founder</small>
