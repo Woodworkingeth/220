@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css?v=7" />
+<link rel="stylesheet" href="../assets/site.css?v=8" />
 
 <script type="application/ld+json">
 {
@@ -58,7 +58,8 @@
     align-items: start;
   }
   .svc-card:first-of-type { border-top: 0; padding-top: 24px; }
-  .svc-photo { width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-top: 28px; border: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+  .svc-photo { display: block; aspect-ratio: 16/10; overflow: hidden; margin-top: 28px; border: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+  .svc-photo img { width: 100%; height: 100%; object-fit: cover; }
   .svc-num {
     font-family: 'Cormorant Garamond', serif; font-weight: 300;
     font-size: 15px; letter-spacing: 0.14em; color: var(--gold-text);
@@ -194,7 +195,7 @@
         <div class="svc-num">01 — Design</div>
         <h2 class="svc-title">Architectural <span class="it">Design</span></h2>
         <div class="svc-tag">Concept · Schematic · Detailing · Permit drawings</div>
-        <img class="svc-photo" src="../images/services/architecture.jpg" width="504" height="316" alt="Architect sketching a building elevation over floor plans" loading="lazy" decoding="async" />
+        <picture class="svc-photo"><source type="image/webp" srcset="../images/home/architect-sketching-design-studio-800.webp 800w, ../images/home/architect-sketching-design-studio-lg.webp 1448w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/architect-sketching-design-studio-800.jpg" srcset="../images/home/architect-sketching-design-studio-800.jpg 800w, ../images/home/architect-sketching-design-studio-lg.jpg 1448w" sizes="(max-width: 768px) 100vw, 33vw" width="1448" height="1086" alt="Architect sketching a villa elevation over floor plans in the 2:20 Partners studio" loading="lazy" decoding="async" /></picture>
       </div>
       <div class="svc-body">
         <p>
@@ -219,7 +220,7 @@
         <div class="svc-num">02 — Residential</div>
         <h2 class="svc-title">Luxury Home &amp; <span class="it">Villa Construction</span></h2>
         <div class="svc-tag">Custom homes · Modern villas · Apartment buildings</div>
-        <img class="svc-photo" src="../images/services/residential.jpg" width="504" height="316" alt="Villa courtyard with olive tree and open glass doors" loading="lazy" decoding="async" />
+        <picture class="svc-photo"><source type="image/webp" srcset="../images/home/luxury-villa-addis-ababa-800.webp 800w, ../images/home/luxury-villa-addis-ababa-lg.webp 1600w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/luxury-villa-addis-ababa-800.jpg" srcset="../images/home/luxury-villa-addis-ababa-800.jpg 800w, ../images/home/luxury-villa-addis-ababa-lg.jpg 1600w" sizes="(max-width: 768px) 100vw, 33vw" width="1600" height="900" alt="Modern stone and timber villa at dusk, Addis Ababa" loading="lazy" decoding="async" /></picture>
       </div>
       <div class="svc-body">
         <p>
@@ -244,7 +245,7 @@
         <div class="svc-num">03 — Commercial</div>
         <h2 class="svc-title">Commercial &amp; <span class="it">Office Remodeling</span></h2>
         <div class="svc-tag">Office · Retail · Hospitality · Mixed-use</div>
-        <img class="svc-photo" src="../images/services/commercial.jpg" width="504" height="316" alt="Stone and glass commercial building at dusk" loading="lazy" decoding="async" />
+        <picture class="svc-photo"><source type="image/webp" srcset="../images/home/mixed-use-building-addis-ababa-800.webp 800w, ../images/home/mixed-use-building-addis-ababa-lg.webp 1122w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/mixed-use-building-addis-ababa-800.jpg" srcset="../images/home/mixed-use-building-addis-ababa-800.jpg 800w, ../images/home/mixed-use-building-addis-ababa-lg.jpg 1122w" sizes="(max-width: 768px) 100vw, 33vw" width="1122" height="1402" alt="Stone and glass mixed-use building on an Addis Ababa street" loading="lazy" decoding="async" /></picture>
       </div>
       <div class="svc-body">
         <p>
@@ -266,7 +267,7 @@
         <div class="svc-num">04 — Interiors</div>
         <h2 class="svc-title">Interior Design &amp; <span class="it">Fit-Out</span></h2>
         <div class="svc-tag">Curated palettes · Custom millwork · Lighting design</div>
-        <img class="svc-photo" src="../images/services/interiors.jpg" width="504" height="316" alt="Light-filled living room with warm wood shelving" loading="lazy" decoding="async" />
+        <picture class="svc-photo"><source type="image/webp" srcset="../images/home/walnut-kitchen-custom-joinery-800.webp 800w, ../images/home/walnut-kitchen-custom-joinery-lg.webp 1448w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/walnut-kitchen-custom-joinery-800.jpg" srcset="../images/home/walnut-kitchen-custom-joinery-800.jpg 800w, ../images/home/walnut-kitchen-custom-joinery-lg.jpg 1448w" sizes="(max-width: 768px) 100vw, 33vw" width="1448" height="1086" alt="Walnut kitchen with stone island and brass pendants" loading="lazy" decoding="async" /></picture>
       </div>
       <div class="svc-body">
         <p>
@@ -291,7 +292,7 @@
         <div class="svc-num">05 — Build &amp; Manage</div>
         <h2 class="svc-title">Construction Supervision &amp; <span class="it">Project Management</span></h2>
         <div class="svc-tag">Daily site supervision · Budget control · Schedule</div>
-        <img class="svc-photo" src="../images/services/supervision.jpg" width="504" height="316" alt="2:20 Partners site engineers reviewing drawings on site" loading="lazy" decoding="async" />
+        <picture class="svc-photo"><source type="image/webp" srcset="../images/home/construction-site-supervision-addis-ababa-800.webp 800w, ../images/home/construction-site-supervision-addis-ababa-lg.webp 1024w" sizes="(max-width: 768px) 100vw, 33vw" /><img src="../images/home/construction-site-supervision-addis-ababa-800.jpg" srcset="../images/home/construction-site-supervision-addis-ababa-800.jpg 800w, ../images/home/construction-site-supervision-addis-ababa-lg.jpg 1024w" sizes="(max-width: 768px) 100vw, 33vw" width="1024" height="682" alt="2:20 Partners founders reviewing drawings on a construction site" loading="lazy" decoding="async" /></picture>
       </div>
       <div class="svc-body">
         <p>
@@ -313,7 +314,7 @@
         <div class="svc-num">06 — Joinery</div>
         <h2 class="svc-title">Custom Furniture &amp; <span class="it">Cabinetry</span></h2>
         <div class="svc-tag">Through 2:20 Woodworks — our in-house shop</div>
-        <img class="svc-photo" src="../images/services/joinery.jpg" width="504" height="316" alt="Hand-planing hardwood in the 2:20 Woodworks shop" loading="lazy" decoding="async" />
+        <picture class="svc-photo"><img src="../images/woodworks-detail.jpg" width="819" height="1024" alt="Custom wardrobe and millwork by 2:20 Woodworks" loading="lazy" decoding="async" /></picture>
       </div>
       <div class="svc-body">
         <p>
