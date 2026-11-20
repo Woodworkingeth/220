@@ -175,64 +175,7 @@
   height: 100%;
 }
 
-/* Project photo gallery */
-.proj[data-gallery] .proj-img {
-  cursor: pointer;
-}
 
-.gallery-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.94);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.gallery-overlay.open {
-  display: flex;
-}
-
-.gallery-image {
-  max-width: 90%;
-  max-height: 82vh;
-  object-fit: contain;
-}
-
-.gallery-close,
-.gallery-prev,
-.gallery-next {
-  position: absolute;
-  border: 0;
-  background: rgba(255,255,255,0.15);
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-  padding: 10px 16px;
-  border-radius: 6px;
-}
-
-.gallery-close {
-  top: 20px;
-  right: 20px;
-}
-
-.gallery-prev {
-  left: 20px;
-}
-
-.gallery-next {
-  right: 20px;
-}
-
-.gallery-count {
-  position: absolute;
-  bottom: 20px;
-  color: white;
-  font-size: 14px;
-}
   
 </style>
 </head>
@@ -436,8 +379,7 @@
         </div>
       </article>
 
-     <article class="proj" data-cat="commercial"
-data-gallery="../images/projects/kampala-office-complex.jpg|../images/projects/kampala-office-complex-2.jpg">
+    <article class="proj" data-cat="commercial">
   <div class="proj-img">
     <div class="ph ph-5">
       <img width="853" height="1024" src="../images/projects/kampala-office-complex.jpg" alt="Kampala office complex design" loading="lazy" />
@@ -455,8 +397,7 @@ data-gallery="../images/projects/kampala-office-complex.jpg|../images/projects/k
   </div>
 </article>
 
-<article class="proj" data-cat="commercial"
-data-gallery="../images/projects/juba-office-complex.jpg|../images/projects/juba-office-complex-2.jpg">
+<article class="proj" data-cat="commercial">
   <div class="proj-img">
     <div class="ph ph-5">
       <img width="853" height="1024" src="../images/projects/juba-office-complex.jpg" alt="Juba office complex design" loading="lazy" />
@@ -677,82 +618,7 @@ chips.forEach(chip => {
   });
 });
 
-// Project photo gallery
-const gallery = document.createElement('div');
-gallery.className = 'gallery-overlay';
 
-gallery.innerHTML = 
-  <button class="gallery-close" aria-label="Close">&times;</button>
-  <button class="gallery-prev" aria-label="Previous">&#10094;</button>
-  <img class="gallery-image" src="" alt="Project photo">
-  <button class="gallery-next" aria-label="Next">&#10095;</button>
-  <div class="gallery-count"></div>
-;
-
-document.body.appendChild(gallery);
-
-const galleryImage = gallery.querySelector('.gallery-image');
-const galleryCount = gallery.querySelector('.gallery-count');
-
-let galleryPhotos = [];
-let galleryIndex = 0;
-
-function showGalleryPhoto() {
-  galleryImage.src = galleryPhotos[galleryIndex];
-  galleryCount.textContent =
-    ${galleryIndex + 1} / ${galleryPhotos.length};
-}
-
-document.querySelectorAll('.proj[data-gallery] .proj-img img')
-  .forEach(img => {
-    img.addEventListener('click', () => {
-      const project = img.closest('.proj');
-      galleryPhotos = project.dataset.gallery.split('|');
-      galleryIndex = 0;
-      showGalleryPhoto();
-      gallery.classList.add('open');
-    });
-  });
-
-gallery.querySelector('.gallery-next').addEventListener('click', () => {
-  galleryIndex = (galleryIndex + 1) % galleryPhotos.length;
-  showGalleryPhoto();
-});
-
-gallery.querySelector('.gallery-prev').addEventListener('click', () => {
-  galleryIndex =
-    (galleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length;
-  showGalleryPhoto();
-});
-
-function closeGallery() {
-  gallery.classList.remove('open');
-  galleryImage.src = '';
-}
-
-gallery.querySelector('.gallery-close')
-  .addEventListener('click', closeGallery);
-
-gallery.addEventListener('click', event => {
-  if (event.target === gallery) closeGallery();
-});
-
-document.addEventListener('keydown', event => {
-  if (!gallery.classList.contains('open')) return;
-
-  if (event.key === 'Escape') closeGallery();
-
-  if (event.key === 'ArrowRight') {
-    galleryIndex = (galleryIndex + 1) % galleryPhotos.length;
-    showGalleryPhoto();
-  }
-
-  if (event.key === 'ArrowLeft') {
-    galleryIndex =
-      (galleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length;
-    showGalleryPhoto();
-  }
-});
   
 </script>
 <script src="../assets/nav.js" defer></script>
