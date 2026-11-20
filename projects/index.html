@@ -652,23 +652,30 @@ data-gallery="../images/projects/juba-office-complex.jpg|../images/projects/juba
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Project filters
-  const chips = document.querySelectorAll('.filter-chip');
-  const featured = document.querySelector('.featured-proj');
-  const projects = document.querySelectorAll('.proj');
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const filter = chip.dataset.filter;
-      const matchesFeatured = (filter === 'all' || featured.dataset.cat === filter);
+ // Project filters
+const chips = document.querySelectorAll('.filter-chip');
+const featured = document.querySelector('.featured-proj');
+const projects = document.querySelectorAll('.proj');
+
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+
+    const filter = chip.dataset.filter;
+
+    if (featured) {
+      const matchesFeatured =
+        (filter === 'all' || featured.dataset.cat === filter);
       featured.style.display = matchesFeatured ? '' : 'none';
-      projects.forEach(p => {
-        const show = (filter === 'all' || p.dataset.cat === filter);
-        p.style.display = show ? '' : 'none';
-      });
+    }
+
+    projects.forEach(p => {
+      const show = (filter === 'all' || p.dataset.cat === filter);
+      p.style.display = show ? '' : 'none';
     });
   });
+});
 
 // Project photo gallery
 const gallery = document.createElement('div');
@@ -746,7 +753,6 @@ document.addEventListener('keydown', event => {
     showGalleryPhoto();
   }
 });
-
   
 </script>
 <script src="../assets/nav.js" defer></script>
