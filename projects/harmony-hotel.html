@@ -3,55 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harmony Hotel – Room Interior Renovation | 220 Partners PLC</title>
-  <meta name="description" content="Harmony Hotel room interior renovation project in Bole, Addis Ababa, Ethiopia by 220 Partners PLC.">
+  <meta name="description" content="Explore Harmony Hotel room interior renovation in Bole, Addis Ababa, Ethiopia, by 2:20 Partners.">
 
-  <link rel="stylesheet" href="../style.css">
+  <title>Harmony Hotel | 2:20 Partners</title>
+
+  <link rel="stylesheet" href="../assets/site.css?v=8">
+
+  <style>
+    .ayat-hero {
+      padding: 80px 0 55px;
+      background: var(--cream);
+    }
+
+    .ayat-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 300;
+      margin: 25px 0 15px;
+    }
+
+    .ayat-hero .it {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .ayat-description {
+      max-width: 700px;
+      color: var(--ink-mid);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .ayat-media {
+      padding: 50px 0 90px;
+    }
+
+    .ayat-media h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    .ayat-photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .ayat-photo-grid img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .ayat-back {
+      margin-top: 45px;
+    }
+
+    @media (max-width: 768px) {
+      .ayat-hero {
+        padding: 55px 0 35px;
+      }
+
+      .ayat-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ayat-photo-grid img {
+        height: 260px;
+      }
+
+      .ayat-media h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Harmony Hotel – Room Interior Renovation</h1>
-    <p>Bole, Addis Ababa, Ethiopia</p>
-  </header>
+<section class="ayat-hero">
+  <div class="container">
 
-  <main class="project-detail">
+    <div class="crumbs">
+      <a href="../">Home</a>
+      <span class="sep">/</span>
+      <a href="./">Projects</a>
+      <span class="sep">/</span>
+      <span>Harmony Hotel</span>
+    </div>
 
-    <div class="project-gallery">
+    <div class="eyebrow">Interior &amp; Fit-out</div>
 
-      <img src="../images/projects/harmony-hotel.png"
-           alt="Harmony Hotel renovated room interior">
+    <h1>Harmony <span class="it">Hotel</span></h1>
 
-      <img src="../images/projects/harmony-hotel-2.png"
-           alt="Harmony Hotel room interior renovation">
+    <p class="ayat-description">
+      A hotel room interior renovation project at Harmony Hotel,
+      located in Bole, Addis Ababa, Ethiopia.
+    </p>
 
-      <img src="../images/projects/harmony-hotel-3.png"
-           alt="Harmony Hotel interior design">
+  </div>
+</section>
 
-      <img src="../images/projects/harmony-hotel-4.png"
-           alt="Harmony Hotel renovated guest room">
+<section class="ayat-media">
+  <div class="container">
 
-      <img src="../images/projects/harmony-hotel-5.png"
-           alt="Harmony Hotel room renovation details">
+    <h2>Project <span class="it">Gallery</span></h2>
+
+    <div class="ayat-photo-grid">
+
+      <img
+        src="../images/projects/harmony-hotel.png"
+        alt="Harmony Hotel - Main Room Interior"
+        loading="lazy"
+      >
+
+      <img
+        src="../images/projects/harmony-hotel-2.png"
+        alt="Harmony Hotel - Room Interior 2"
+        loading="lazy"
+      >
+
+      <img
+        src="../images/projects/harmony-hotel-3.png"
+        alt="Harmony Hotel - Room Interior 3"
+        loading="lazy"
+      >
+
+      <img
+        src="../images/projects/harmony-hotel-4.png"
+        alt="Harmony Hotel - Room Interior 4"
+        loading="lazy"
+      >
+
+      <img
+        src="../images/projects/harmony-hotel-5.png"
+        alt="Harmony Hotel - Room Interior 5"
+        loading="lazy"
+      >
 
     </div>
 
-    <div class="project-info">
-      <h2>Project Overview</h2>
-      <p>
-        A hotel room interior renovation project at Harmony Hotel,
-        located in Bole, Addis Ababa, Ethiopia.
-      </p>
-
-      <p><strong>Project:</strong> Harmony Hotel – Room Interior Renovation</p>
-      <p><strong>Location:</strong> Bole, Addis Ababa, Ethiopia</p>
-      <p><strong>Category:</strong> Interior &amp; Fit-out</p>
+    <div class="ayat-back">
+      <a href="./" class="btn btn-dark">← Back to Projects</a>
     </div>
 
-    <a href="../index.html">← Back to Projects</a>
+  </div>
+</section>
 
-  </main>
+<script src="../assets/nav.js" defer></script>
 
 </body>
 </html>
